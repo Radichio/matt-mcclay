@@ -30,7 +30,7 @@ function Nav({ scrolled }) {
 
 function DroneAnim() {
   return (
-    <div style={{position:'absolute',top:'18%',left:0,width:'100%',height:'60px',animation:'droneFly 22s linear infinite',pointerEvents:'none',zIndex:3}}>
+    <div style={{position:'absolute',top:'15%',left:0,width:'100%',height:'60px',animation:'droneFly 28s ease-in-out infinite',pointerEvents:'none',zIndex:3}}>
       <svg width="64" height="36" viewBox="0 0 64 36" fill="none" style={{filter:'drop-shadow(0 0 8px rgba(218,145,0,0.6))'}}>
         <rect x="24" y="14" width="16" height="8" rx="3" fill="#DA9100" opacity="0.9"/>
         <line x1="24" y1="16" x2="8"  y2="8"  stroke="#B0B7BE" strokeWidth="1.5"/>
@@ -138,7 +138,17 @@ export default function Home(){
         a{color:inherit;text-decoration:none}
         ::selection{background:rgba(218,145,0,0.3)}
         @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-        @keyframes droneFly{0%{transform:translateX(-80px) translateY(0)}25%{transform:translateX(30vw) translateY(-20px)}50%{transform:translateX(60vw) translateY(10px)}75%{transform:translateX(85vw) translateY(-10px)}100%{transform:translateX(110vw) translateY(0)}}
+        @keyframes droneFly{
+          0%  {transform:translate(10vw, 20px) rotate(0deg)}
+          12% {transform:translate(35vw, -30px) rotate(8deg)}
+          25% {transform:translate(65vw, -10px) rotate(4deg)}
+          37% {transform:translate(82vw, 40px) rotate(-6deg)}
+          50% {transform:translate(70vw, 80px) rotate(-12deg)}
+          62% {transform:translate(45vw, 90px) rotate(-8deg)}
+          75% {transform:translate(20vw, 60px) rotate(4deg)}
+          87% {transform:translate(5vw, 20px) rotate(10deg)}
+          100%{transform:translate(10vw, 20px) rotate(0deg)}
+        }
         @keyframes subtleZoom{from{transform:scale(1.04) translateY(0)}to{transform:scale(1.08) translateY(-1%)}}
         @keyframes scanline{0%{transform:translateY(-100%)}100%{transform:translateY(100vh)}}
         @keyframes scrollPulse{0%,100%{opacity:0.4}50%{opacity:1}}

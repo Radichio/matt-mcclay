@@ -10,7 +10,7 @@ function Nav({ scrolled }) {
     <nav style={{
       position:'fixed',top:0,left:0,right:0,zIndex:200,
       display:'flex',alignItems:'center',justifyContent:'space-between',
-      padding:'16px 48px',
+      padding:'12px 48px',
       background: scrolled ? 'rgba(13,37,53,0.97)' : 'transparent',
       backdropFilter: scrolled ? 'blur(16px)' : 'none',
       borderBottom: scrolled ? '0.5px solid rgba(218,145,0,0.2)' : 'none',
@@ -60,20 +60,20 @@ function HUD() {
     return ()=>clearInterval(t)
   },[])
   const hud={fontSize:'10px',fontFamily:'monospace',letterSpacing:'0.1em',color:C.gold,lineHeight:1.8}
-  const corners=[{top:80,left:40},{top:80,right:40},{bottom:110,left:40},{bottom:110,right:40}]
+  const corners=[{top:160,left:40},{top:160,right:40},{bottom:90,left:40},{bottom:90,right:40}]
   return (
     <>
-      <div style={{position:'absolute',top:'90px',left:'48px',zIndex:10,opacity:0.7}}>
+      <div style={{position:'absolute',top:'160px',left:'48px',zIndex:10,opacity:0.7}}>
         <div style={hud}>ALT  {alt}ft</div>
         <div style={hud}>SIG  {sig}%</div>
         <div style={hud}>MODE PHOTO</div>
       </div>
-      <div style={{position:'absolute',top:'90px',right:'48px',zIndex:10,opacity:0.7,textAlign:'right'}}>
+      <div style={{position:'absolute',top:'160px',right:'48px',zIndex:10,opacity:0.7,textAlign:'right'}}>
         <div style={hud}>37.4138° N</div>
         <div style={hud}>79.1422° W</div>
         <div style={hud}>LYNCHBURG VA</div>
       </div>
-      <div style={{position:'absolute',bottom:'120px',left:'48px',zIndex:10,opacity:0.5}}>
+      <div style={{position:'absolute',bottom:'100px',left:'48px',zIndex:10,opacity:0.5}}>
         <div style={hud}>● REC  00:04:32</div>
       </div>
       {corners.map((pos,i)=>(

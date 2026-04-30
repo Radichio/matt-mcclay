@@ -17,7 +17,7 @@ function Nav({ scrolled }) {
       transition:'all 0.4s ease',
     }}>
       <a href="/"><img src="/logo-clean.png" alt="Matt McClay"
-        style={{height:'64px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
+        style={{height:'140px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         {[['About','/about'],['Packages','/packages']].map(([l,h])=>(
           <a key={h} href={h} style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>{l}</a>

@@ -6,7 +6,7 @@ const gridBg = `linear-gradient(rgba(218,145,0,0.04) 1px, transparent 1px),linea
 function Nav() {
   return (
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'16px 48px',background:'rgba(13,37,53,0.97)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
-      <a href="/"><img src="/logo-clean.png" alt="Matt McClay" style={{height:'64px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
+      <a href="/"><img src="/logo-clean.png" alt="Matt McClay" style={{height:'140px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         <a href="/about" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.gold}}>Packages</a>

@@ -6,7 +6,7 @@ const gridBg = `linear-gradient(rgba(218,145,0,0.04) 1px, transparent 1px),linea
 function Nav() {
   return (
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'16px 48px',background:'rgba(13,37,53,0.97)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
-      <a href="/"><img src="/logo-clean.png" alt="Matt McClay" style={{height:'64px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
+      <a href="/"><img src="/logo-clean.png" alt="Matt McClay" style={{height:'140px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         <a href="/about" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
@@ -62,7 +62,7 @@ export default function Booking() {
       <Nav />
       <div style={{flex:1,display:'flex',alignItems:'center',justifyContent:'center',padding:'60px 40px',textAlign:'center'}}>
         <div>
-          <div style={{width:'64px',height:'64px',borderRadius:'50%',border:`2px solid ${C.gold}`,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 28px',fontSize:'26px',color:C.gold,boxShadow:'0 0 32px rgba(218,145,0,0.3)'}}>✓</div>
+          <div style={{width:'64px',height:'140px',borderRadius:'50%',border:`2px solid ${C.gold}`,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 28px',fontSize:'26px',color:C.gold,boxShadow:'0 0 32px rgba(218,145,0,0.3)'}}>✓</div>
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'42px',color:C.bone,marginBottom:'16px'}}>You're booked.</h1>
           <p style={{fontSize:'16px',color:'rgba(227,218,201,0.55)',maxWidth:'340px',margin:'0 auto 36px',lineHeight:1.8}}>Matt will confirm within the hour.<br/>Check your inbox for next steps.</p>
           <a href="/" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'14px 32px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase'}}>Back to home</a>

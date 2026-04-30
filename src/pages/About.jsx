@@ -54,7 +54,7 @@ export default function About() {
       <Nav />
 
       {/* HERO */}
-      <section style={{position:'relative',height:'52vh',minHeight:'380px',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <section style={{position:'relative',height:'52vh',minHeight:'480px',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center'}}>
         <div style={{position:'absolute',inset:0,zIndex:0,backgroundImage:'url(/property_aerial.jpg)',backgroundSize:'cover',backgroundPosition:'center 25%',animation:'subtleZoom 20s ease infinite alternate'}}/>
         <div style={{position:'absolute',inset:0,zIndex:1,background:'linear-gradient(to bottom,rgba(13,37,53,0.82) 0%,rgba(13,37,53,0.55) 50%,rgba(13,37,53,1) 100%)'}}/>
         <div style={{position:'absolute',inset:0,zIndex:2,backgroundImage:gridBg,backgroundSize:'40px 40px',opacity:0.5,pointerEvents:'none'}}/>
@@ -67,7 +67,7 @@ export default function About() {
             {i===3&&<><line x1="20" y1="10" x2="20" y2="20" stroke={C.gold} strokeWidth="1.5"/><line x1="20" y1="20" x2="10" y2="20" stroke={C.gold} strokeWidth="1.5"/></>}
           </svg>
         ))}
-        <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'0 24px'}}>
+        <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'140px 24px 0'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'20px',animation:'fadeUp 0.8s ease 0.2s both'}}>About</div>
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(32px,5vw,58px)',lineHeight:1.1,color:C.bone,animation:'fadeUp 0.8s ease 0.4s both'}}>
             A designer who learned<br/><em style={{color:C.gold}}>to fly.</em>

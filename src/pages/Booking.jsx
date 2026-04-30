@@ -86,12 +86,12 @@ export default function Booking() {
       <Nav />
 
       {/* HERO */}
-      <section style={{position:'relative',height:'40vh',minHeight:'300px',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <section style={{position:'relative',height:'40vh',minHeight:'440px',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center'}}>
         <div style={{position:'absolute',inset:0,zIndex:0,backgroundImage:'url(/property_aerial.jpg)',backgroundSize:'cover',backgroundPosition:'center 50%',animation:'subtleZoom 20s ease infinite alternate'}}/>
         <div style={{position:'absolute',inset:0,zIndex:1,background:'linear-gradient(to bottom,rgba(13,37,53,0.85) 0%,rgba(13,37,53,0.65) 50%,rgba(13,37,53,1) 100%)'}}/>
         <div style={{position:'absolute',inset:0,zIndex:2,backgroundImage:gridBg,backgroundSize:'40px 40px',opacity:0.5,pointerEvents:'none'}}/>
         <div style={{position:'absolute',left:0,right:0,height:'1px',zIndex:3,background:'linear-gradient(to right,transparent,rgba(218,145,0,0.12),transparent)',animation:'scanline 10s linear infinite',pointerEvents:'none'}}/>
-        <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'0 24px'}}>
+        <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'140px 24px 0'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'20px',animation:'fadeUp 0.8s ease 0.2s both'}}>Book a Shoot</div>
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(30px,5vw,54px)',lineHeight:1.1,color:C.bone,animation:'fadeUp 0.8s ease 0.4s both'}}>
             Let's fly your<br/><em style={{color:C.gold}}>property.</em>

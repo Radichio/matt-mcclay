@@ -10,7 +10,7 @@ function Nav() {
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         <a href="/about" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.gold}}>Packages</a>
-        <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a Shoot</a>
+        <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
     </nav>
   )
@@ -42,7 +42,7 @@ function Reveal({ children, delay = 0 }) {
 }
 
 const PKGS = [
-  { name:'Scout', price:'$249', tag:'Entry', accent:C.pearl, hot:false,
+  { name:'Scout', price:'$299', tag:'Entry', accent:C.pearl, hot:false,
     includes:['25 edited aerial photos','48-hour delivery','Digital download portal','MLS-ready resolution','Commercial use licence'],
     ideal:'Residential listings, land parcels' },
   { name:'Soar', price:'$449', tag:'Most Popular', accent:C.gold, hot:true,
@@ -51,7 +51,7 @@ const PKGS = [
   { name:'Nest Builder', price:'$699', tag:'Premium', accent:C.clay, hot:false,
     includes:['50 edited aerial photos','Twilight / golden hour session','Full video walkthrough','Social cuts + Reels','Branded one-pager PDF','24-hour delivery'],
     ideal:'High-value listings, broker marketing' },
-  { name:'Territory', price:'From $1,500', tag:'Commercial', accent:C.bone, hot:false,
+  { name:'Territory', price:'From $1,495', tag:'Commercial', accent:C.bone, hot:false,
     includes:['Commercial real estate packages','Construction progress documentation','Architecture & development sites','Monthly retainer options','Priority scheduling','Custom deliverables on request'],
     ideal:'Brokers, developers, construction firms' },
 ]
@@ -69,7 +69,7 @@ export default function Packages() {
   const [base, setBase] = useState('Soar')
   const [addons, setAddons] = useState([])
   const basePkg = PKGS.find(p => p.name === base)
-  const basePrice = base === 'Territory' ? 1500 : PKGS.find(p=>p.name===base)?.price.replace('$','').replace(',','') * 1
+  const basePrice = base === 'Territory' ? 1495 : (PKGS.find(pkg=>pkg.name===base)?.price || 0)
   const addonTotal = addons.reduce((s,a) => s + (ADDONS.find(x=>x.name===a)?.price||0), 0)
   const total = basePrice + addonTotal
 
@@ -99,6 +99,14 @@ export default function Packages() {
       </section>
 
       <main style={{padding:'72px 48px',maxWidth:'1100px',margin:'0 auto'}}>
+
+        {/* Complimentary callout */}
+        <Reveal>
+          <div style={{textAlign:'center',marginBottom:'36px',padding:'18px',background:'rgba(218,145,0,0.06)',border:'0.5px solid rgba(218,145,0,0.25)',borderRadius:'10px'}}>
+            <p style={{fontSize:'15px',color:C.gold,fontWeight:600,letterSpacing:'0.04em'}}>✦ First shoot complimentary — no strings, no obligation</p>
+            <p style={{fontSize:'12px',color:'rgba(227,218,201,0.45)',marginTop:'5px'}}>Book a complimentary first shoot to see the quality before you commit.</p>
+          </div>
+        </Reveal>
 
         {/* Package cards */}
         <Reveal>
@@ -156,7 +164,7 @@ export default function Packages() {
                 <p style={{fontSize:'11px',color:C.pearl,marginBottom:'4px',letterSpacing:'0.08em',textTransform:'uppercase'}}>Your estimate</p>
                 <p style={{fontFamily:"'Playfair Display',serif",fontSize:'44px',color:C.gold}}>${total.toLocaleString()}{base==='Territory'?'+':''}</p>
               </div>
-              <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'16px 36px',fontSize:'15px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book this shoot</a>
+              <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'16px 36px',fontSize:'15px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book this flight</a>
             </div>
           </div>
         </Reveal>

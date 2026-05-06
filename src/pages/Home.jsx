@@ -22,7 +22,7 @@ function Nav({ scrolled }) {
         {[['About','/about'],['Packages','/packages']].map(([l,h])=>(
           <a key={h} href={h} style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>{l}</a>
         ))}
-        <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a Shoot</a>
+        <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
     </nav>
   )
@@ -230,7 +230,7 @@ export default function Home(){
         <HUD/>
         <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'0 24px',maxWidth:'920px'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.2s both'}}>
-            Lynchburg, VA  ·  Central Virginia  ·  FAA Part 107
+            Lynchburg, VA  ·  Virginia, West Virginia & North Carolina  ·  FAA Part 107
           </div>
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(40px,7vw,80px)',lineHeight:1.08,color:C.bone,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.4s both'}}>
             Aerial media for<br/>real estate, development<br/><em style={{color:C.gold}}>&amp; architecture.</em>
@@ -239,7 +239,7 @@ export default function Home(){
             Commercial photography and fast video for brokers, developers and designers — delivered in 24 hours.
           </p>
           <div style={{display:'flex',gap:'14px',justifyContent:'center',flexWrap:'wrap',animation:'fadeUp 0.8s ease 0.8s both'}}>
-            <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.25)'}}>Book a shoot</a>
+            <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.25)'}}>Book a flight</a>
             <a href="/packages" style={{background:'transparent',color:C.bone,border:'0.5px solid rgba(227,218,201,0.22)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>See packages</a>
           </div>
           <p style={{marginTop:'20px',fontSize:'12px',color:'rgba(227,218,201,0.28)',letterSpacing:'0.06em',animation:'fadeUp 0.8s ease 1s both'}}>First shoot complimentary — no strings.</p>
@@ -350,10 +350,10 @@ export default function Home(){
           <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'40px',color:C.bone,marginBottom:'48px',textAlign:'center'}}>Straightforward pricing.</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'16px',marginBottom:'36px'}}>
             {[
-              {n:'Scout',p:'$249',s:'Photos only · 48hr',a:C.pearl,hot:false},
+              {n:'Scout',p:'$299',s:'Photos only · 48hr',a:C.pearl,hot:false},
               {n:'Soar',p:'$449',s:'Photos + video + social · 24hr',a:C.gold,hot:true},
               {n:'Nest Builder',p:'$699',s:'Twilight + branded one-pager',a:C.clay,hot:false},
-              {n:'Territory',p:'$1,500+',s:'Commercial · construction · retainers',a:C.bone,hot:false},
+              {n:'Territory',p:'$1,495+',s:'Commercial · construction · retainers',a:C.bone,hot:false},
             ].map((pkg,i)=>(
               <div key={pkg.n} style={{background:pkg.hot?'rgba(218,145,0,0.07)':'rgba(255,255,255,0.03)',border:`0.5px solid ${pkg.hot?'rgba(218,145,0,0.4)':'rgba(227,218,201,0.08)'}`,borderTop:`2px solid ${pkg.a}`,borderRadius:'12px',padding:'24px 20px',boxShadow:pkg.hot?'0 0 40px rgba(218,145,0,0.08)':'none'}}>
                 <p style={{fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.14em',color:pkg.a,marginBottom:'8px'}}>{pkg.n}{pkg.hot?' — Popular':''}</p>
@@ -379,7 +379,7 @@ export default function Home(){
               <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px'}}>Territory</p>
               <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:C.bone,marginBottom:'16px',lineHeight:1.15}}>For clients who<br/><em style={{color:C.gold}}>need more.</em></h2>
               <p style={{fontSize:'14px',color:'rgba(227,218,201,0.6)',lineHeight:1.85,marginBottom:'28px'}}>Territory is Matt McClay's ongoing relationship tier — monthly aerial documentation, priority scheduling, and a permanent aerial presence for your portfolio.</p>
-              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'36px',color:C.bone,marginBottom:'28px'}}>$1,500+</p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'36px',color:C.bone,marginBottom:'28px'}}>$1,495+</p>
               <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'14px 28px',fontSize:'13px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase'}}>Request a consultation</a>
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:'14px'}}>
@@ -400,7 +400,7 @@ export default function Home(){
           <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(32px,5vw,56px)',color:C.bone,marginBottom:'20px',lineHeight:1.15}}>Every project deserves<br/>to be <em style={{color:C.gold}}>seen properly.</em></h2>
           <p style={{fontSize:'16px',color:'rgba(227,218,201,0.45)',maxWidth:'380px',margin:'0 auto 40px',lineHeight:1.85}}>Whether it's a listing, a development site, or long-term documentation — it starts with a single shoot.</p>
           <div style={{display:'flex',gap:'14px',justifyContent:'center',flexWrap:'wrap'}}>
-            <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a shoot</a>
+            <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a flight</a>
             <a href="/packages" style={{background:'transparent',color:C.bone,border:'0.5px solid rgba(227,218,201,0.2)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>See all packages</a>
           </div>
         </section>

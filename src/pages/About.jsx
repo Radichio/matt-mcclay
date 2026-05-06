@@ -10,7 +10,7 @@ function Nav() {
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         <a href="/about" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.gold}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
-        <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a Shoot</a>
+        <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
     </nav>
   )
@@ -78,6 +78,11 @@ export default function About() {
       {/* CONTENT */}
       <main style={{maxWidth:'800px',margin:'0 auto',padding:'80px 48px'}}>
         <Reveal>
+          <div style={{display:'inline-block',marginBottom:'28px',padding:'12px 20px',background:'rgba(218,145,0,0.06)',border:'0.5px solid rgba(218,145,0,0.25)',borderRadius:'8px'}}>
+            <p style={{fontSize:'14px',color:C.gold,fontWeight:600,letterSpacing:'0.04em'}}>✦ First shoot complimentary — no strings, no obligation</p>
+          </div>
+        </Reveal>
+        <Reveal>
           <p style={{fontSize:'20px',color:C.bone,lineHeight:1.85,marginBottom:'24px',fontFamily:"'Playfair Display',serif",fontStyle:'italic'}}>
             Matt McClay spent years as a professional graphic designer before earning his FAA Part 107 certification. That background is what separates the work.
           </p>
@@ -89,7 +94,7 @@ export default function About() {
         </Reveal>
         <Reveal delay={0.15}>
           <p style={{fontSize:'16px',color:'rgba(227,218,201,0.6)',lineHeight:1.9,marginBottom:'64px'}}>
-            Based in Lynchburg, Virginia, Matt works with commercial real estate brokers, developers, architects, and construction companies across Central Virginia who need professional aerial media that moves listings and documents projects.
+            Based in Lynchburg, Virginia, Matt works with commercial real estate brokers, developers, architects, and construction companies across Virginia, West Virginia & North Carolina who need professional aerial media that moves listings and documents projects.
           </p>
         </Reveal>
 
@@ -97,12 +102,12 @@ export default function About() {
         <Reveal delay={0.2}>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'24px',marginBottom:'72px'}}>
             {[
-              {label:'Based in',value:'Lynchburg, VA',accent:C.gold},
-              {label:'Coverage',value:'Central Virginia',accent:C.clay},
+              {label:'First shoot',value:'Complimentary',accent:C.gold},
               {label:'Certification',value:'FAA Part 107',accent:C.pearl},
               {label:'Insurance',value:'Fully insured',accent:C.bone},
-              {label:'Turnaround',value:'24 hrs standard',accent:C.gold},
-              {label:'First shoot',value:'Complimentary',accent:C.clay},
+              {label:'Based in',value:'Lynchburg, VA',accent:C.clay},
+              {label:'Turnaround',value:'24 hrs standard',accent:C.clay},
+              {label:'Coverage',value:'Virginia, West Virginia & North Carolina',accent:C.bone},
             ].map(f=>(
               <div key={f.label} style={{borderTop:`2px solid ${f.accent}`,paddingTop:'14px'}}>
                 <p style={{fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.14em',color:C.pearl,marginBottom:'7px'}}>{f.label}</p>
@@ -140,7 +145,7 @@ export default function About() {
           <div style={{marginTop:'64px',padding:'48px',background:'rgba(218,145,0,0.05)',border:'0.5px solid rgba(218,145,0,0.2)',borderRadius:'16px',textAlign:'center',backgroundImage:gridBg,backgroundSize:'40px 40px'}}>
             <p style={{fontFamily:"'Playfair Display',serif",fontSize:'26px',color:C.bone,marginBottom:'14px'}}>Ready to see what your listing looks like from above?</p>
             <p style={{fontSize:'14px',color:'rgba(227,218,201,0.5)',marginBottom:'28px'}}>First shoot complimentary. No obligation.</p>
-            <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'15px 36px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a shoot</a>
+            <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'15px 36px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a flight</a>
           </div>
         </Reveal>
       </main>

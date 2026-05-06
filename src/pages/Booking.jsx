@@ -33,7 +33,7 @@ function Nav() {
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         <a href="/about"    style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
-        <a href="/booking"  style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a Shoot</a>
+        <a href="/booking"  style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
     </nav>
   )
@@ -358,7 +358,7 @@ export default function Booking() {
         <div style={{position:'absolute',inset:0,zIndex:2,backgroundImage:gridBg,backgroundSize:'40px 40px',opacity:0.5,pointerEvents:'none'}}/>
         <div style={{position:'absolute',left:0,right:0,height:'1px',zIndex:3,background:'linear-gradient(to right,transparent,rgba(218,145,0,0.12),transparent)',animation:'scanline 10s linear infinite',pointerEvents:'none'}}/>
         <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'160px 24px 0'}}>
-          <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'20px',animation:'fadeUp 0.8s ease 0.2s both'}}>Book a Shoot</div>
+          <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'20px',animation:'fadeUp 0.8s ease 0.2s both'}}>Book a flight</div>
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(30px,5vw,54px)',lineHeight:1.1,color:C.bone,animation:'fadeUp 0.8s ease 0.4s both'}}>
             Let's fly your<br/><em style={{color:C.gold}}>property.</em>
           </h1>
@@ -437,7 +437,7 @@ export default function Booking() {
                 <label style={labelStyle}>Package</label>
                 <select value={form.pkg} onChange={e=>setForm(p=>({...p,pkg:e.target.value}))} style={{...field('pkg'),cursor:'pointer'}}>
                   <optgroup label="Residential / Mixed">
-                    <option value="Scout">Scout — $249</option>
+                    <option value="Scout">Scout — $299</option>
                     <option value="Soar">Soar — $449</option>
                     <option value="Nest Builder">Nest Builder — $699</option>
                   </optgroup>
@@ -445,7 +445,7 @@ export default function Booking() {
                     <option value="Commercial Real Estate">Commercial Real Estate — from $1,000</option>
                     <option value="Construction Documentation">Construction — from $2,500/mo</option>
                     <option value="Architecture & Design">Architecture & Design — from $800</option>
-                    <option value="Territory Retainer">Territory Retainer — from $1,500/mo</option>
+                    <option value="Territory Retainer">Territory Retainer — from $1,495/mo</option>
                   </optgroup>
                 </select>
               </div>

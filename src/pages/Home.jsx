@@ -29,24 +29,66 @@ function Nav({ scrolled }) {
 }
 
 function DroneAnim() {
-  return (
-    <div style={{position:'absolute',top:'15%',left:0,width:'100%',height:'60px',animation:'droneFly 28s ease-in-out infinite',pointerEvents:'none',zIndex:3}}>
-      <svg width="64" height="36" viewBox="0 0 64 36" fill="none" style={{filter:'drop-shadow(0 0 8px rgba(218,145,0,0.6))'}}>
-        <rect x="24" y="14" width="16" height="8" rx="3" fill="#DA9100" opacity="0.9"/>
-        <line x1="24" y1="16" x2="8"  y2="8"  stroke="#B0B7BE" strokeWidth="1.5"/>
-        <line x1="40" y1="16" x2="56" y2="8"  stroke="#B0B7BE" strokeWidth="1.5"/>
-        <line x1="24" y1="22" x2="8"  y2="28" stroke="#B0B7BE" strokeWidth="1.5"/>
-        <line x1="40" y1="22" x2="56" y2="28" stroke="#B0B7BE" strokeWidth="1.5"/>
-        <ellipse cx="8"  cy="8"  rx="8" ry="3" fill="#B0B7BE" opacity="0.5"/>
-        <ellipse cx="56" cy="8"  rx="8" ry="3" fill="#B0B7BE" opacity="0.5"/>
-        <ellipse cx="8"  cy="28" rx="8" ry="3" fill="#B0B7BE" opacity="0.5"/>
-        <ellipse cx="56" cy="28" rx="8" ry="3" fill="#B0B7BE" opacity="0.5"/>
-        <circle cx="32" cy="26" r="3" fill="#0d2535" stroke="#DA9100" strokeWidth="1"/>
-        <circle cx="32" cy="10" r="2" fill="#DA9100"/>
-      </svg>
-      <div style={{position:'absolute',top:'36px',left:'28px',width:'1px',height:'40px',background:'linear-gradient(to bottom, rgba(218,145,0,0.6), transparent)'}}/>
-    </div>
-  )
+  const [pos, setPos] = useState({ x: 50, y: 30 })
+  const [target, setTarget] = useState({ x: 50, y: 30 })
+  const [tilt, setTilt] = useState(0)
+  const heroRef = useRef(null)
+  const animRef = useRef(null)
+  const isMobile = typeof window !== 'undefined' && window.matchMedia('(hover: none)').matches
+
+  useEffect(() => {
+    // Smooth lerp animation
+    const lerp = (a, b, t) => a + (b - a) * t
+    const animate = () => {
+      setPos(prev => {
+        const nx = lerp(prev.x, target.x, 0.06)
+        const ny = lerp(prev.y, target.y, 0.06)
+        const dx = target.x - prev.x
+        setTilt(Math.max(-18, Math.min(18, dx * 0.4)))
+        return { x: nx, y: ny }
+      })
+      animRef.current = requestAnimationFrame(animate)
+    }
+    animRef.current = requestAnimationFrame(animate)
+    return () => cancelAnimationFrame(animRef.current)
+  }, [target])
+
+  useEffect(() => {
+    if (isMobile) {
+      // Mobile: slow floating drift pattern
+      let t = 0
+      const drift = setInterval(() => {
+        t += 0.02
+        setTarget({
+          x: 50 + Math.sin(t) * 30,
+          y: 25 + Math.cos(t * 0.7) * 12,
+        })
+      }, 50)
+      return () => clearInterval(drift)
+    }
+  }, [isMobile])
+
+  function handleMouseMove(e) {
+    if (isMobile) return
+    const rect = e.currentTarget.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    const y = ((e.clientY - rect.top) / rect.height) * 100
+    setTarget({ x, y })
+  }
+
+  function handleTouchMove(e) {
+    const rect = e.currentTarget.getBoundingClientRect()
+    const touch = e.touches[0]
+    const x = ((touch.clientX - rect.left) / rect.width) * 100
+    const y = ((touch.clientY - rect.top) / rect.height) * 100
+    setTarget({ x, y })
+  }
+
+  function handleMouseLeave() {
+    if (!isMobile) setTarget({ x: 50, y: 28 })
+  }
+
+  return { pos, tilt, handlers: { onMouseMove: handleMouseMove, onMouseLeave: handleMouseLeave, onTouchMove: handleTouchMove } }
 }
 
 function HUD() {
@@ -130,6 +172,8 @@ export default function Home(){
     return ()=>window.removeEventListener('scroll',fn)
   },[])
 
+  const { pos, tilt, handlers } = DroneAnim()
+
   return(
     <div style={{minHeight:'100vh',background:C.dark,fontFamily:"'DM Sans',sans-serif"}}>
       <style>{`
@@ -138,17 +182,7 @@ export default function Home(){
         a{color:inherit;text-decoration:none}
         ::selection{background:rgba(218,145,0,0.3)}
         @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
-        @keyframes droneFly{
-          0%  {transform:translate(10vw, 20px) rotate(0deg)}
-          12% {transform:translate(35vw, -30px) rotate(8deg)}
-          25% {transform:translate(65vw, -10px) rotate(4deg)}
-          37% {transform:translate(82vw, 40px) rotate(-6deg)}
-          50% {transform:translate(70vw, 80px) rotate(-12deg)}
-          62% {transform:translate(45vw, 90px) rotate(-8deg)}
-          75% {transform:translate(20vw, 60px) rotate(4deg)}
-          87% {transform:translate(5vw, 20px) rotate(10deg)}
-          100%{transform:translate(10vw, 20px) rotate(0deg)}
-        }
+
         @keyframes subtleZoom{from{transform:scale(1.04) translateY(0)}to{transform:scale(1.08) translateY(-1%)}}
         @keyframes scanline{0%{transform:translateY(-100%)}100%{transform:translateY(100vh)}}
         @keyframes scrollPulse{0%,100%{opacity:0.4}50%{opacity:1}}
@@ -157,12 +191,42 @@ export default function Home(){
       <Nav scrolled={scrolled}/>
 
       {/* HERO */}
-      <section style={{position:'relative',height:'100vh',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center'}}>
+      <section {...handlers} style={{position:'relative',height:'100vh',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center',cursor:'none'}}>
         <div style={{position:'absolute',inset:0,zIndex:0,backgroundImage:'url(/property_aerial.jpg)',backgroundSize:'cover',backgroundPosition:'center 40%',animation:'subtleZoom 20s ease infinite alternate'}}/>
         <div style={{position:'absolute',inset:0,zIndex:1,background:'linear-gradient(to bottom, rgba(13,37,53,0.75) 0%, rgba(13,37,53,0.5) 40%, rgba(13,37,53,0.88) 80%, rgba(13,37,53,1) 100%)'}}/>
         <div style={{position:'absolute',inset:0,zIndex:2,backgroundImage:gridBg,backgroundSize:'40px 40px',opacity:0.6,pointerEvents:'none'}}/>
         <div style={{position:'absolute',left:0,right:0,height:'2px',zIndex:3,background:'linear-gradient(to right, transparent, rgba(218,145,0,0.15), transparent)',animation:'scanline 8s linear infinite',pointerEvents:'none'}}/>
-        <DroneAnim/>
+        {/* Interactive drone */}
+        <div style={{
+          position:'absolute',
+          left:`calc(${pos.x}% - 32px)`,
+          top:`calc(${pos.y}% - 18px)`,
+          zIndex:10,
+          pointerEvents:'none',
+          transform:`rotate(${tilt}deg)`,
+          transition:'transform 0.1s ease',
+          filter:'drop-shadow(0 0 12px rgba(218,145,0,0.7))',
+        }}>
+          <svg width="64" height="36" viewBox="0 0 64 36" fill="none">
+            <rect x="24" y="14" width="16" height="8" rx="3" fill="#DA9100" opacity="0.95"/>
+            <line x1="24" y1="16" x2="8"  y2="8"  stroke="#B0B7BE" strokeWidth="1.5"/>
+            <line x1="40" y1="16" x2="56" y2="8"  stroke="#B0B7BE" strokeWidth="1.5"/>
+            <line x1="24" y1="22" x2="8"  y2="28" stroke="#B0B7BE" strokeWidth="1.5"/>
+            <line x1="40" y1="22" x2="56" y2="28" stroke="#B0B7BE" strokeWidth="1.5"/>
+            <ellipse cx="8"  cy="8"  rx="8" ry="3" fill="#B0B7BE" opacity="0.6"/>
+            <ellipse cx="56" cy="8"  rx="8" ry="3" fill="#B0B7BE" opacity="0.6"/>
+            <ellipse cx="8"  cy="28" rx="8" ry="3" fill="#B0B7BE" opacity="0.6"/>
+            <ellipse cx="56" cy="28" rx="8" ry="3" fill="#B0B7BE" opacity="0.6"/>
+            <circle cx="32" cy="26" r="3" fill="#0d2535" stroke="#DA9100" strokeWidth="1"/>
+            <circle cx="32" cy="10" r="2" fill="#DA9100"/>
+          </svg>
+          {/* Signal line dropping down */}
+          <div style={{position:'absolute',top:'36px',left:'30px',width:'1px',height:'60px',background:'linear-gradient(to bottom,rgba(218,145,0,0.7),transparent)'}}/>
+          {/* Crosshair target on ground */}
+          <div style={{position:'absolute',top:'96px',left:'22px',width:'18px',height:'18px',border:'1px solid rgba(218,145,0,0.4)',borderRadius:'50%'}}/>
+          <div style={{position:'absolute',top:'103px',left:'26px',width:'6px',height:'1px',background:'rgba(218,145,0,0.4)'}}/>
+          <div style={{position:'absolute',top:'100px',left:'30px',width:'1px',height:'6px',background:'rgba(218,145,0,0.4)'}}/>
+        </div>
         <HUD/>
         <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'0 24px',maxWidth:'920px'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.2s both'}}>

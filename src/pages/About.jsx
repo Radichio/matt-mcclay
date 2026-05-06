@@ -103,10 +103,10 @@ export default function About() {
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(180px,1fr))',gap:'24px',marginBottom:'72px'}}>
             {[
               {label:'First shoot',value:'Complimentary',accent:C.gold},
-              {label:'Certification',value:'FAA Part 107',accent:C.pearl},
+              {label:'Turnaround',value:'24 hrs standard',accent:C.pearl},
               {label:'Insurance',value:'Fully insured',accent:C.bone},
               {label:'Based in',value:'Lynchburg, VA',accent:C.clay},
-              {label:'Turnaround',value:'24 hrs standard',accent:C.clay},
+              {label:'Certification',value:'FAA Part 107',accent:C.clay},
               {label:'Coverage',value:'Virginia, West Virginia & North Carolina',accent:C.bone},
             ].map(f=>(
               <div key={f.label} style={{borderTop:`2px solid ${f.accent}`,paddingTop:'14px'}}>

@@ -1,6 +1,8 @@
 {
   "bookedDates": [],
   "holdDates": [],
-  "unavailableDates": [],
+  "unavailableDates": [
+    "2026-05-22"
+  ],
   "bookedLabels": {}
 }

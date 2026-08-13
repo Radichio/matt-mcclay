@@ -10,8 +10,8 @@ function Nav({ scrolled }) {
     <nav style={{
       position:'fixed',top:0,left:0,right:0,zIndex:200,
       display:'flex',alignItems:'center',justifyContent:'space-between',
-      padding:'12px 48px',
-      background: scrolled ? 'rgba(13,37,53,0.97)' : 'transparent',
+      padding:'10px 48px',
+      background: scrolled ? 'rgba(13,37,53,0.78)' : 'transparent',
       backdropFilter: scrolled ? 'blur(16px)' : 'none',
       borderBottom: scrolled ? '0.5px solid rgba(218,145,0,0.2)' : 'none',
       transition:'all 0.4s ease',
@@ -172,7 +172,6 @@ export default function Home(){
     return ()=>window.removeEventListener('scroll',fn)
   },[])
 
-  const { pos, tilt, handlers } = DroneAnim()
 
   return(
     <div style={{minHeight:'100vh',background:C.dark,fontFamily:"'DM Sans',sans-serif"}}>
@@ -191,7 +190,7 @@ export default function Home(){
       <Nav scrolled={scrolled}/>
 
       {/* HERO */}
-      <section {...handlers} style={{position:'relative',height:'100vh',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center',cursor:'none'}}>
+      <section style={{position:'relative',height:'100vh',overflow:'hidden',display:'flex',alignItems:'center',justifyContent:'center'}}>
         <div style={{position:'absolute',inset:0,zIndex:0,backgroundImage:'url(/property_aerial.jpg)',backgroundSize:'cover',backgroundPosition:'center 40%',animation:'subtleZoom 20s ease infinite alternate'}}/>
         <div style={{position:'absolute',inset:0,zIndex:1,background:'linear-gradient(to bottom, rgba(13,37,53,0.75) 0%, rgba(13,37,53,0.5) 40%, rgba(13,37,53,0.88) 80%, rgba(13,37,53,1) 100%)'}}/>
         <div style={{position:'absolute',inset:0,zIndex:2,backgroundImage:gridBg,backgroundSize:'40px 40px',opacity:0.6,pointerEvents:'none'}}/>
@@ -230,7 +229,7 @@ export default function Home(){
         <HUD/>
         <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'0 24px',maxWidth:'920px'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.2s both'}}>
-            Lynchburg, VA  ·  Virginia, West Virginia & North Carolina  ·  FAA Part 107
+            Lynchburg, VA  ·  Virginia, West Virginia & North Carolina  ·  Licensed & insured
           </div>
           <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(40px,7vw,80px)',lineHeight:1.08,color:C.bone,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.4s both'}}>
             Aerial media for<br/>real estate, development<br/><em style={{color:C.gold}}>&amp; architecture.</em>
@@ -266,7 +265,7 @@ export default function Home(){
       <Reveal>
         <section style={{padding:'80px 48px',maxWidth:'900px',margin:'0 auto'}}>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))',gap:'32px',textAlign:'center'}}>
-            {[[15,'+','Years in design',C.gold],[24,'hr','Turnaround guarantee',C.clay],[3,'','States covered',C.pearl],[100,'%','FAA Part 107 certified',C.bone]].map(([n,s,l,a],i)=>(
+            {[[15,'+','Years in design',C.gold],[24,'hr','Turnaround guarantee',C.clay],[3,'','States covered',C.pearl],[100,'%','Licensed & insured',C.bone]].map(([n,s,l,a],i)=>(
               <div key={i} style={{borderTop:`2px solid ${a}`,paddingTop:'20px'}}>
                 <div style={{fontFamily:"'Playfair Display',serif",fontSize:'52px',color:C.bone,lineHeight:1}}><Counter target={n} suffix={s}/></div>
                 <p style={{fontSize:'10px',color:'rgba(227,218,201,0.4)',letterSpacing:'0.1em',textTransform:'uppercase',marginTop:'10px'}}>{l}</p>
@@ -407,8 +406,8 @@ export default function Home(){
       </Reveal>
 
       <footer style={{borderTop:'0.5px solid rgba(218,145,0,0.1)',padding:'20px 48px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'8px'}}>
-        <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  ·  FAA Part 107 Certified</span>
-        <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Commercial  ·  Construction  ·  Architecture</span>
+        <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
+        <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Commercial  ·  Events  ·  Architecture</span>
       </footer>
     </div>
   )

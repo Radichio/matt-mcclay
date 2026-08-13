@@ -3,8 +3,8 @@ const gridBg = `linear-gradient(rgba(218,145,0,0.04) 1px, transparent 1px),linea
 
 function Nav() {
   return (
-    <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'12px 48px',background:'rgba(13,37,53,0.97)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
-      <a href="/"><img src="/logo-clean.png" alt="Matt McClay" style={{height:'140px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
+    <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'10px 48px',background:'rgba(13,37,53,0.72)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
+      <a href="/"><img src="/logo-horizontal.png" alt="Matt McClay + Associates" style={{height:'52px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.92}}/></a>
       <div style={{display:'flex',gap:'28px',alignItems:'center'}}>
         <a href="/about"    style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
@@ -18,7 +18,7 @@ function Nav() {
 function Footer() {
   return (
     <footer style={{borderTop:'0.5px solid rgba(218,145,0,0.1)',padding:'20px 48px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'8px'}}>
-      <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  ·  FAA Part 107 Certified</span>
+      <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
       <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Weddings  ·  Proposals  ·  Corporate  ·  Celebrations</span>
     </footer>
   )
@@ -148,7 +148,7 @@ export default function Events() {
         </div>
 
         <div style={{textAlign:'center'}}>
-          <p style={{fontSize:'12px',color:'rgba(227,218,201,0.3)',marginBottom:'24px'}}>All packages include FAA Part 107 certified pilot · Fully insured · Virginia, West Virginia & North Carolina</p>
+          <p style={{fontSize:'12px',color:'rgba(227,218,201,0.3)',marginBottom:'24px'}}>All packages include Licensed & insured pilot · Fully insured · Virginia, West Virginia & North Carolina</p>
           <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'16px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.15)'}}>Book a flight</a>
         </div>
       </section>

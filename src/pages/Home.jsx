@@ -16,7 +16,7 @@ function Nav({ scrolled }) {
       borderBottom: scrolled ? '0.5px solid rgba(218,145,0,0.2)' : 'none',
       transition:'all 0.4s ease',
     }}>
-      <a href="/"><img src="/logo-horizontal.png" alt="Matt McClay + Associates" style={{height:'80px',width:'auto',opacity:0.95}}/></a>
+      <a href="/"><img src="/logo-nav.png" alt="Matt McClay + Associates" style={{height:'72px',width:'auto',opacity:0.95}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         {[['About','/about'],['Packages','/packages'],['Events','/events']].map(([l,h])=>(
           <a key={h} href={h} style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>{l}</a>

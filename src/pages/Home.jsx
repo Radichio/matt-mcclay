@@ -300,6 +300,41 @@ export default function Home(){
         </section>
       </Reveal>
 
+      {/* EVENTS TEASER */}
+      <Reveal>
+        <section style={{margin:'0 48px 88px',borderRadius:'20px',overflow:'hidden',border:'1px solid rgba(218,145,0,0.2)',position:'relative',background:'rgba(13,37,53,0.6)'}}>
+          <div style={{position:'absolute',inset:0,backgroundImage:'linear-gradient(135deg, rgba(189,92,0,0.15) 0%, rgba(13,37,53,0.8) 60%)'}}/>
+          <div style={{position:'relative',zIndex:2,padding:'56px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'48px',alignItems:'center'}}>
+            <div>
+              <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px'}}>Event Aerial</p>
+              <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(26px,3.5vw,40px)',color:'#ffffff',marginBottom:'16px',lineHeight:1.15}}>
+                Your most important days<br/><em style={{color:C.gold}}>deserve to be seen.</em>
+              </h2>
+              <p style={{fontSize:'14px',color:'rgba(255,255,255,0.82)',lineHeight:1.85,marginBottom:'28px'}}>
+                From wedding ceremonies to corporate events, graduation celebrations to private gatherings — aerial coverage that captures the scale and emotion of the moment.
+              </p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'28px',color:'#ffffff',marginBottom:'24px'}}>From $599</p>
+              <div style={{display:'flex',gap:'12px',flexWrap:'wrap'}}>
+                <a href="/events" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'13px 28px',fontSize:'13px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase'}}>
+                  See event packages
+                </a>
+                <a href="/booking" style={{display:'inline-block',background:'transparent',color:'#ffffff',border:'0.5px solid rgba(255,255,255,0.25)',borderRadius:'8px',padding:'13px 28px',fontSize:'13px',letterSpacing:'0.04em',textTransform:'uppercase'}}>
+                  Book a flight
+                </a>
+              </div>
+            </div>
+            <div style={{display:'flex',flexDirection:'column',gap:'14px'}}>
+              {['Weddings — ceremony, venue & reception','Proposals — the moment from above','Corporate events & conferences','Graduations & milestone celebrations','Festivals, fairs & private parties','Same-day preview add-on available'].map(f=>(
+                <div key={f} style={{display:'flex',gap:'14px',alignItems:'flex-start'}}>
+                  <span style={{color:C.gold,flexShrink:0,fontSize:'16px',marginTop:'1px'}}>·</span>
+                  <span style={{fontSize:'13px',color:'rgba(255,255,255,0.82)',lineHeight:1.65}}>{f}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </Reveal>
+
       {/* FINAL CTA */}
       <Reveal>
         <section style={{padding:'100px 48px',textAlign:'center',borderTop:'1px solid rgba(218,145,0,0.1)'}}>

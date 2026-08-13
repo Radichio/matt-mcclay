@@ -8,6 +8,7 @@ function Nav() {
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'16px 48px',background:'rgba(13,37,53,0.97)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
       <a href="/"><img src="/logo-clean.png" alt="Matt McClay" style={{height:'140px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
+        <a href="/events" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Events</a>
         <a href="/about" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
         <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.gold}}>Packages</a>
         <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
@@ -42,16 +43,16 @@ function Reveal({ children, delay = 0 }) {
 }
 
 const PKGS = [
-  { name:'Scout', price:'$299', tag:'Entry', accent:C.pearl, hot:false,
+  { name:'Scout', price:'$299', tag:'Entry', deposit:'100% upfront', depositNote:'Full payment at booking', accent:C.pearl, hot:false,
     includes:['25 edited aerial photos','48-hour delivery','Digital download portal','MLS-ready resolution','Commercial use licence'],
     ideal:'Residential listings, land parcels' },
-  { name:'Soar', price:'$449', tag:'Most Popular', accent:C.gold, hot:true,
+  { name:'Soar', price:'$449', tag:'Most Popular', deposit:'50% deposit', depositNote:'$225 at booking · $224 on delivery', accent:C.gold, hot:true,
     includes:['40 edited aerial photos','Aerial walkthrough video (90 sec)','3 social media cut-downs','24-hour delivery','Branded file set','Digital download portal'],
     ideal:'Commercial listings, mid-market residential' },
-  { name:'Nest Builder', price:'$699', tag:'Premium', accent:C.clay, hot:false,
+  { name:'Nest Builder', price:'$699', tag:'Premium', deposit:'50% deposit', depositNote:'$350 at booking · $349 on delivery', accent:C.clay, hot:false,
     includes:['50 edited aerial photos','Twilight / golden hour session','Full video walkthrough','Social cuts + Reels','Branded one-pager PDF','24-hour delivery'],
     ideal:'High-value listings, broker marketing' },
-  { name:'Territory', price:'From $1,495', tag:'Commercial', accent:C.bone, hot:false,
+  { name:'Territory', price:'From $1,495', tag:'Commercial', deposit:'50% deposit', depositNote:'50% at booking · 50% on delivery', accent:C.bone, hot:false,
     includes:['Commercial real estate packages','Construction progress documentation','Architecture & development sites','Monthly retainer options','Priority scheduling','Custom deliverables on request'],
     ideal:'Brokers, developers, construction firms' },
 ]

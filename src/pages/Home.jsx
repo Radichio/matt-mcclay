@@ -19,7 +19,7 @@ function Nav({ scrolled }) {
       <a href="/"><img src="/logo-clean.png" alt="Matt McClay"
         style={{height:'140px',width:'auto',filter:'brightness(0) invert(1)',opacity:0.95}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
-        {[['About','/about'],['Packages','/packages']].map(([l,h])=>(
+        {[['About','/about'],['Packages','/packages'],['Events','/events']].map(([l,h])=>(
           <a key={h} href={h} style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>{l}</a>
         ))}
         <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
@@ -253,7 +253,7 @@ export default function Home(){
       {/* SERVICES STRIP */}
       <Reveal>
         <section style={{borderTop:'1px solid rgba(218,145,0,0.15)',borderBottom:'1px solid rgba(218,145,0,0.15)',padding:'24px 48px',backgroundImage:gridBg,backgroundSize:'40px 40px',display:'flex',justifyContent:'center',gap:'56px',flexWrap:'wrap'}}>
-          {[['Commercial Real Estate','Listings that close faster'],['Construction Progress','Document every stage'],['Architecture & Design','Showcase the build'],['FAA Part 107 Certified','Fully insured']].map(([l,s])=>(
+          {[['Commercial Real Estate','Listings that close faster'],['Construction Progress','Document every stage'],['Architecture & Design','Showcase the build'],['Event Aerial','Weddings · proposals · celebrations']].map(([l,s])=>(
             <div key={l} style={{textAlign:'center'}}>
               <p style={{fontSize:'10px',fontWeight:700,color:C.gold,letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'4px'}}>{l}</p>
               <p style={{fontSize:'11px',color:'rgba(227,218,201,0.45)'}}>{s}</p>
@@ -266,7 +266,7 @@ export default function Home(){
       <Reveal>
         <section style={{padding:'80px 48px',maxWidth:'900px',margin:'0 auto'}}>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))',gap:'32px',textAlign:'center'}}>
-            {[[247,'+','Properties shot',C.gold],[24,'hr','Turnaround',C.clay],[100,'%','Delivery rate',C.pearl],[98,'%','Client return rate',C.bone]].map(([n,s,l,a],i)=>(
+            {[[15,'+','Years in design',C.gold],[24,'hr','Turnaround guarantee',C.clay],[3,'','States covered',C.pearl],[100,'%','FAA Part 107 certified',C.bone]].map(([n,s,l,a],i)=>(
               <div key={i} style={{borderTop:`2px solid ${a}`,paddingTop:'20px'}}>
                 <div style={{fontFamily:"'Playfair Display',serif",fontSize:'52px',color:C.bone,lineHeight:1}}><Counter target={n} suffix={s}/></div>
                 <p style={{fontSize:'10px',color:'rgba(227,218,201,0.4)',letterSpacing:'0.1em',textTransform:'uppercase',marginTop:'10px'}}>{l}</p>

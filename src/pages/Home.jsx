@@ -19,7 +19,7 @@ function Nav({ scrolled }) {
       <a href="/"><img src="/logo.svg" alt="Matt McClay + Associates" style={{width:'300px',height:'auto',opacity:1}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
         {[['About','/about'],['Packages','/packages'],['Events','/events']].map(([l,h])=>(
-          <a key={h} href={h} style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>{l}</a>
+          <a key={h} href={h} style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>{l}</a>
         ))}
         <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
@@ -138,20 +138,20 @@ export default function Home(){
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.2s both'}}>
             Lynchburg, VA  ·  Virginia, West Virginia & North Carolina  ·  Licensed & insured
           </div>
-          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(40px,7vw,80px)',lineHeight:1.08,color:C.bone,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.4s both'}}>
+          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(40px,7vw,80px)',lineHeight:1.08,color:'#ffffff',marginBottom:'28px',animation:'fadeUp 0.8s ease 0.4s both'}}>
             Aerial media for<br/>real estate, development<br/><em style={{color:C.gold}}>&amp; architecture.</em>
           </h1>
-          <p style={{fontSize:'17px',color:'rgba(227,218,201,0.6)',maxWidth:'460px',margin:'0 auto 44px',lineHeight:1.85,animation:'fadeUp 0.8s ease 0.6s both'}}>
+          <p style={{fontSize:'17px',color:'rgba(255,255,255,0.88)',maxWidth:'460px',margin:'0 auto 44px',lineHeight:1.85,animation:'fadeUp 0.8s ease 0.6s both'}}>
             Commercial photography and fast video for brokers, developers and designers — delivered in 24 hours.
           </p>
           <div style={{display:'flex',gap:'14px',justifyContent:'center',flexWrap:'wrap',animation:'fadeUp 0.8s ease 0.8s both'}}>
             <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.25)'}}>Book a flight</a>
-            <a href="/packages" style={{background:'transparent',color:C.bone,border:'0.5px solid rgba(227,218,201,0.22)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>See packages</a>
+            <a href="/packages" style={{background:'transparent',color:'#ffffff',border:'0.5px solid rgba(227,218,201,0.22)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>See packages</a>
           </div>
-          <p style={{marginTop:'20px',fontSize:'12px',color:'rgba(227,218,201,0.28)',letterSpacing:'0.06em',animation:'fadeUp 0.8s ease 1s both'}}>First shoot complimentary — no strings.</p>
+          <p style={{marginTop:'20px',fontSize:'12px',color:'rgba(255,255,255,0.55)',letterSpacing:'0.06em',animation:'fadeUp 0.8s ease 1s both'}}>First shoot complimentary — no strings.</p>
         </div>
         <div style={{position:'absolute',bottom:'32px',left:'50%',transform:'translateX(-50%)',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'8px',animation:'fadeUp 1s ease 1.2s both'}}>
-          <span style={{fontSize:'9px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(227,218,201,0.35)'}}>Scroll</span>
+          <span style={{fontSize:'9px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(255,255,255,0.65)'}}>Scroll</span>
           <div style={{width:'1px',height:'40px',background:`linear-gradient(to bottom, ${C.gold}, transparent)`,animation:'scrollPulse 2s ease infinite'}}/>
         </div>
       </section>
@@ -161,8 +161,8 @@ export default function Home(){
         <section style={{borderTop:'1px solid rgba(218,145,0,0.15)',borderBottom:'1px solid rgba(218,145,0,0.15)',padding:'24px 48px',backgroundImage:gridBg,backgroundSize:'40px 40px',display:'flex',justifyContent:'center',gap:'56px',flexWrap:'wrap'}}>
           {[['Commercial Real Estate','Listings that close faster'],['Construction Progress','Document every stage'],['Architecture & Design','Showcase the build'],['Event Aerial','Weddings · proposals · celebrations']].map(([l,s])=>(
             <div key={l} style={{textAlign:'center'}}>
-              <p style={{fontSize:'10px',fontWeight:700,color:C.gold,letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'4px'}}>{l}</p>
-              <p style={{fontSize:'11px',color:'rgba(227,218,201,0.45)'}}>{s}</p>
+              <p style={{fontSize:'10px',fontWeight:700,color:'#DA9100',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'6px',fontWeight:700}}>{l}</p>
+              <p style={{fontSize:'11px',color:'rgba(255,255,255,0.75)'}}>{s}</p>
             </div>
           ))}
         </section>
@@ -174,8 +174,8 @@ export default function Home(){
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(160px,1fr))',gap:'32px',textAlign:'center'}}>
             {[[15,'+','Years in design',C.gold],[24,'hr','Turnaround guarantee',C.clay],[3,'','States covered',C.pearl],[100,'%','Licensed & insured',C.bone]].map(([n,s,l,a],i)=>(
               <div key={i} style={{borderTop:`2px solid ${a}`,paddingTop:'20px'}}>
-                <div style={{fontFamily:"'Playfair Display',serif",fontSize:'52px',color:C.bone,lineHeight:1}}><Counter target={n} suffix={s}/></div>
-                <p style={{fontSize:'10px',color:'rgba(227,218,201,0.4)',letterSpacing:'0.1em',textTransform:'uppercase',marginTop:'10px'}}>{l}</p>
+                <div style={{fontFamily:"'Playfair Display',serif",fontSize:'52px',color:'#ffffff',lineHeight:1}}><Counter target={n} suffix={s}/></div>
+                <p style={{fontSize:'10px',color:'rgba(255,255,255,0.70)',letterSpacing:'0.1em',textTransform:'uppercase',marginTop:'10px'}}>{l}</p>
               </div>
             ))}
           </div>
@@ -185,9 +185,9 @@ export default function Home(){
       {/* AERIAL SHOWCASE */}
       <Reveal>
         <section style={{padding:'0 48px 88px',textAlign:'center'}}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px'}}>What you've been missing</p>
-          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:C.bone,marginBottom:'14px'}}>See what your listings<br/>look like from above.</h2>
-          <p style={{fontSize:'15px',color:'rgba(227,218,201,0.5)',maxWidth:'380px',margin:'0 auto 48px',lineHeight:1.8}}>One aerial shoot changes how a property is perceived before a buyer ever steps inside.</p>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px'}}>What you've been missing</p>
+          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:'#ffffff',marginBottom:'14px'}}>See what your listings<br/>look like from above.</h2>
+          <p style={{fontSize:'15px',color:'rgba(255,255,255,0.82)',maxWidth:'380px',margin:'0 auto 48px',lineHeight:1.8}}>One aerial shoot changes how a property is perceived before a buyer ever steps inside.</p>
           <div style={{maxWidth:'820px',margin:'0 auto',borderRadius:'16px',overflow:'hidden',border:'1px solid rgba(218,145,0,0.25)',boxShadow:'0 0 80px rgba(218,145,0,0.08)',position:'relative'}}>
             <img src="/property_aerial.jpg" alt="Aerial property" style={{width:'100%',height:'440px',objectFit:'cover',objectPosition:'center 30%',display:'block'}}/>
             <div style={{position:'absolute',inset:0,background:'linear-gradient(to bottom, transparent 55%, rgba(13,37,53,0.95) 100%)'}}/>
@@ -195,8 +195,8 @@ export default function Home(){
             <div style={{position:'absolute',top:'16px',right:'16px',fontFamily:'monospace',fontSize:'10px',color:C.gold,opacity:0.85,letterSpacing:'0.1em',textAlign:'right'}}>37.4138°N  79.1422°W</div>
             <div style={{position:'absolute',bottom:0,left:0,right:0,padding:'20px 28px',display:'flex',justifyContent:'space-between',alignItems:'center'}}>
               <div>
-                <p style={{fontSize:'15px',fontWeight:600,color:C.bone}}>3200 Candlers Mountain Rd</p>
-                <p style={{fontSize:'11px',color:C.pearl}}>Lynchburg, VA  ·  Commercial Office</p>
+                <p style={{fontSize:'15px',fontWeight:600,color:'#ffffff'}}>3200 Candlers Mountain Rd</p>
+                <p style={{fontSize:'11px',color:'rgba(218,145,0,0.85)'}}>Lynchburg, VA  ·  Commercial Office</p>
               </div>
               <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'11px 24px',fontSize:'12px',fontWeight:700}}>Book this</a>
             </div>
@@ -208,8 +208,8 @@ export default function Home(){
       <Reveal>
         <section style={{padding:'88px 48px',background:'linear-gradient(to bottom, rgba(218,145,0,0.03), transparent)',borderTop:'1px solid rgba(218,145,0,0.1)'}}>
           <div style={{maxWidth:'1000px',margin:'0 auto'}}>
-            <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px',textAlign:'center'}}>Not just a drone pilot</p>
-            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:C.bone,marginBottom:'56px',textAlign:'center'}}>Beyond the listing photo.</h2>
+            <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px',textAlign:'center'}}>Not just a drone pilot</p>
+            <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:'#ffffff',marginBottom:'56px',textAlign:'center'}}>Beyond the listing photo.</h2>
             <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(190px,1fr))',gap:'40px'}}>
               {[
                 {t:'Designer first. Pilot second.',b:'Matt spent years in graphic design before earning Part 107. He thinks about composition, light, and story — not just airspace.',a:C.gold},
@@ -219,8 +219,8 @@ export default function Home(){
                 {t:'Every format, ready to use.',b:'MLS photos, Lightroom-edited. Video for YouTube, Reels, TikTok. One package, nothing to figure out.',a:C.gold},
               ].map((c,i)=>(
                 <div key={i} style={{borderTop:`2px solid ${c.a}`,paddingTop:'20px'}}>
-                  <p style={{fontFamily:"'Playfair Display',serif",fontSize:'17px',color:C.bone,marginBottom:'10px',lineHeight:1.3}}>{c.t}</p>
-                  <p style={{fontSize:'13px',color:'rgba(227,218,201,0.5)',lineHeight:1.8}}>{c.b}</p>
+                  <p style={{fontFamily:"'Playfair Display',serif",fontSize:'17px',color:'#ffffff',marginBottom:'10px',lineHeight:1.3}}>{c.t}</p>
+                  <p style={{fontSize:'13px',color:'rgba(255,255,255,0.82)',lineHeight:1.8}}>{c.b}</p>
                 </div>
               ))}
             </div>
@@ -231,8 +231,8 @@ export default function Home(){
       {/* SHOOT STATUS */}
       <Reveal>
         <section style={{padding:'72px 48px',textAlign:'center',borderTop:'1px solid rgba(218,145,0,0.08)'}}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px'}}>Shoot tracking</p>
-          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'36px',color:C.bone,marginBottom:'48px'}}>Always know where your shoot stands.</h2>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px'}}>Shoot tracking</p>
+          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'36px',color:'#ffffff',marginBottom:'48px'}}>Always know where your shoot stands.</h2>
           <div style={{display:'flex',justifyContent:'center',alignItems:'center',flexWrap:'wrap',gap:0,maxWidth:'640px',margin:'0 auto'}}>
             {['Booked','Confirmed','Shoot day','Editing','Delivered'].map((s,i,arr)=>(
               <div key={s} style={{display:'flex',alignItems:'center'}}>
@@ -252,8 +252,8 @@ export default function Home(){
       {/* PACKAGES */}
       <Reveal>
         <section style={{padding:'72px 48px',maxWidth:'1100px',margin:'0 auto'}}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px',textAlign:'center'}}>Packages</p>
-          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'40px',color:C.bone,marginBottom:'48px',textAlign:'center'}}>Straightforward pricing.</h2>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px',textAlign:'center'}}>Packages</p>
+          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'40px',color:'#ffffff',marginBottom:'48px',textAlign:'center'}}>Straightforward pricing.</h2>
           <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'16px',marginBottom:'36px'}}>
             {[
               {n:'Scout',p:'$299',s:'Photos only · 48hr',a:C.pearl,hot:false},
@@ -263,8 +263,8 @@ export default function Home(){
             ].map((pkg,i)=>(
               <div key={pkg.n} style={{background:pkg.hot?'rgba(218,145,0,0.07)':'rgba(255,255,255,0.03)',border:`0.5px solid ${pkg.hot?'rgba(218,145,0,0.4)':'rgba(227,218,201,0.08)'}`,borderTop:`2px solid ${pkg.a}`,borderRadius:'12px',padding:'24px 20px',boxShadow:pkg.hot?'0 0 40px rgba(218,145,0,0.08)':'none'}}>
                 <p style={{fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.14em',color:pkg.a,marginBottom:'8px'}}>{pkg.n}{pkg.hot?' — Popular':''}</p>
-                <p style={{fontFamily:"'Playfair Display',serif",fontSize:'32px',color:C.bone,marginBottom:'8px'}}>{pkg.p}</p>
-                <p style={{fontSize:'11px',color:'rgba(227,218,201,0.4)',lineHeight:1.6}}>{pkg.s}</p>
+                <p style={{fontFamily:"'Playfair Display',serif",fontSize:'32px',color:'#ffffff',marginBottom:'8px'}}>{pkg.p}</p>
+                <p style={{fontSize:'11px',color:'rgba(255,255,255,0.70)',lineHeight:1.6}}>{pkg.s}</p>
               </div>
             ))}
           </div>
@@ -282,17 +282,17 @@ export default function Home(){
           <div style={{position:'absolute',inset:0,backgroundImage:gridBg,backgroundSize:'40px 40px',opacity:0.4}}/>
           <div style={{position:'relative',zIndex:2,padding:'64px 56px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:'56px',alignItems:'center'}}>
             <div>
-              <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px'}}>Territory</p>
-              <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:C.bone,marginBottom:'16px',lineHeight:1.15}}>For clients who<br/><em style={{color:C.gold}}>need more.</em></h2>
-              <p style={{fontSize:'14px',color:'rgba(227,218,201,0.6)',lineHeight:1.85,marginBottom:'28px'}}>Territory is Matt McClay's ongoing relationship tier — monthly aerial documentation, priority scheduling, and a permanent aerial presence for your portfolio.</p>
-              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'36px',color:C.bone,marginBottom:'28px'}}>$1,495+</p>
+              <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px'}}>Territory</p>
+              <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:'#ffffff',marginBottom:'16px',lineHeight:1.15}}>For clients who<br/><em style={{color:C.gold}}>need more.</em></h2>
+              <p style={{fontSize:'14px',color:'rgba(255,255,255,0.88)',lineHeight:1.85,marginBottom:'28px'}}>Territory is Matt McClay's ongoing relationship tier — monthly aerial documentation, priority scheduling, and a permanent aerial presence for your portfolio.</p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'36px',color:'#ffffff',marginBottom:'28px'}}>$1,495+</p>
               <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'14px 28px',fontSize:'13px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase'}}>Request a consultation</a>
             </div>
             <div style={{display:'flex',flexDirection:'column',gap:'14px'}}>
               {['Monthly progress documentation','Priority scheduling — always first','On-going project aerial library','Architecture & design feed content','Branded social content monthly','Retainer pricing — fixed monthly cost'].map(f=>(
                 <div key={f} style={{display:'flex',gap:'14px',alignItems:'flex-start'}}>
                   <span style={{color:C.gold,marginTop:'2px',flexShrink:0,fontSize:'16px'}}>·</span>
-                  <span style={{fontSize:'13px',color:'rgba(227,218,201,0.6)',lineHeight:1.65}}>{f}</span>
+                  <span style={{fontSize:'13px',color:'rgba(255,255,255,0.88)',lineHeight:1.65}}>{f}</span>
                 </div>
               ))}
             </div>
@@ -303,17 +303,17 @@ export default function Home(){
       {/* FINAL CTA */}
       <Reveal>
         <section style={{padding:'100px 48px',textAlign:'center',borderTop:'1px solid rgba(218,145,0,0.1)'}}>
-          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(32px,5vw,56px)',color:C.bone,marginBottom:'20px',lineHeight:1.15}}>Every project deserves<br/>to be <em style={{color:C.gold}}>seen properly.</em></h2>
-          <p style={{fontSize:'16px',color:'rgba(227,218,201,0.45)',maxWidth:'380px',margin:'0 auto 40px',lineHeight:1.85}}>Whether it's a listing, a development site, or long-term documentation — it starts with a single shoot.</p>
+          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(32px,5vw,56px)',color:'#ffffff',marginBottom:'20px',lineHeight:1.15}}>Every project deserves<br/>to be <em style={{color:C.gold}}>seen properly.</em></h2>
+          <p style={{fontSize:'16px',color:'rgba(255,255,255,0.75)',maxWidth:'380px',margin:'0 auto 40px',lineHeight:1.85}}>Whether it's a listing, a development site, or long-term documentation — it starts with a single shoot.</p>
           <div style={{display:'flex',gap:'14px',justifyContent:'center',flexWrap:'wrap'}}>
             <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a flight</a>
-            <a href="/packages" style={{background:'transparent',color:C.bone,border:'0.5px solid rgba(227,218,201,0.2)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>See all packages</a>
+            <a href="/packages" style={{background:'transparent',color:'#ffffff',border:'0.5px solid rgba(227,218,201,0.2)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>See all packages</a>
           </div>
         </section>
       </Reveal>
 
       <footer style={{borderTop:'0.5px solid rgba(218,145,0,0.1)',padding:'20px 48px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'8px'}}>
-        <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
+        <span style={{fontSize:'11px',color:'rgba(255,255,255,0.50)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
         <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Commercial  ·  Events  ·  Architecture</span>
       </footer>
     </div>

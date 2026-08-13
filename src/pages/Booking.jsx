@@ -31,9 +31,9 @@ function Nav() {
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'10px 48px',background:'rgba(13,37,53,0.72)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
       <a href="/"><img src="/logo.svg" alt="Matt McClay + Associates" style={{width:'300px',height:'auto',opacity:1}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
-        <a href="/events" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Events</a>
-        <a href="/about"    style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
-        <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
+        <a href="/events" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>Events</a>
+        <a href="/about"    style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>About</a>
+        <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>Packages</a>
         <a href="/booking"  style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
     </nav>
@@ -43,7 +43,7 @@ function Nav() {
 function Footer() {
   return (
     <footer style={{borderTop:'0.5px solid rgba(218,145,0,0.1)',padding:'20px 48px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'8px'}}>
-      <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
+      <span style={{fontSize:'11px',color:'rgba(255,255,255,0.50)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
       <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Virginia  ·  West Virginia  ·  North Carolina</span>
     </footer>
   )
@@ -97,23 +97,23 @@ function WeatherStrip({ region }) {
   return (
     <div style={{marginBottom:'40px'}}>
       <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'12px',flexWrap:'wrap',gap:'8px'}}>
-        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl}}>
+        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)'}}>
           7-Day Forecast — {REGIONS[region].city}
         </p>
-        <p style={{fontSize:'11px',color:'rgba(227,218,201,0.35)'}}>
+        <p style={{fontSize:'11px',color:'rgba(255,255,255,0.65)'}}>
           Matt monitors conditions 72 hrs before your shoot
         </p>
       </div>
 
       {loading && (
         <div style={{padding:'24px',textAlign:'center',background:'rgba(255,255,255,0.03)',borderRadius:'10px',border:'0.5px solid rgba(227,218,201,0.08)'}}>
-          <p style={{fontSize:'13px',color:'rgba(227,218,201,0.4)'}}>Loading forecast…</p>
+          <p style={{fontSize:'13px',color:'rgba(255,255,255,0.70)'}}>Loading forecast…</p>
         </div>
       )}
 
       {error && (
         <div style={{padding:'16px',background:'rgba(255,255,255,0.03)',borderRadius:'10px',border:'0.5px solid rgba(227,218,201,0.08)'}}>
-          <p style={{fontSize:'12px',color:'rgba(227,218,201,0.4)',textAlign:'center'}}>{error}</p>
+          <p style={{fontSize:'12px',color:'rgba(255,255,255,0.70)',textAlign:'center'}}>{error}</p>
         </div>
       )}
 
@@ -132,12 +132,12 @@ function WeatherStrip({ region }) {
                 borderRadius:'8px',padding:'10px 6px',textAlign:'center',
                 opacity: cond==='bad' ? 0.55 : 1,
               }}>
-                <p style={{fontSize:'9px',fontWeight:700,color:C.pearl,letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:'2px'}}>{dayName}</p>
-                <p style={{fontSize:'9px',color:'rgba(227,218,201,0.4)',marginBottom:'6px'}}>{dayNum}</p>
+                <p style={{fontSize:'9px',fontWeight:700,color:'rgba(218,145,0,0.85)',letterSpacing:'0.08em',textTransform:'uppercase',marginBottom:'2px'}}>{dayName}</p>
+                <p style={{fontSize:'9px',color:'rgba(255,255,255,0.70)',marginBottom:'6px'}}>{dayNum}</p>
                 <div style={{fontSize:'20px',marginBottom:'6px',lineHeight:1}}>{wIcon(d)}</div>
-                <p style={{fontSize:'10px',color:C.bone,marginBottom:'4px'}}>{d.temperature}°{d.temperatureUnit}</p>
-                <p style={{fontSize:'9px',color:'rgba(227,218,201,0.45)',marginBottom:'6px',lineHeight:1.3,minHeight:'24px'}}>{d.shortForecast}</p>
-                <p style={{fontSize:'8px',color:C.pearl,marginBottom:'2px'}}>💨 {d.windSpeed}</p>
+                <p style={{fontSize:'10px',color:'#ffffff',marginBottom:'4px'}}>{d.temperature}°{d.temperatureUnit}</p>
+                <p style={{fontSize:'9px',color:'rgba(255,255,255,0.75)',marginBottom:'6px',lineHeight:1.3,minHeight:'24px'}}>{d.shortForecast}</p>
+                <p style={{fontSize:'8px',color:'rgba(218,145,0,0.85)',marginBottom:'2px'}}>💨 {d.windSpeed}</p>
                 <div style={{marginTop:'6px',padding:'3px 0',background:COND_COLOR[cond],borderRadius:'4px'}}>
                   <p style={{fontSize:'8px',fontWeight:700,color:'white',letterSpacing:'0.06em',textTransform:'uppercase'}}>{COND_LABEL[cond]}</p>
                 </div>
@@ -198,9 +198,9 @@ function AvailabilityCalendar({ availability, selectedDate, onSelectDate }) {
   }
 
   const STATUS_STYLE = {
-    available:   { bg:'rgba(45,106,79,0.25)',   border:'rgba(45,106,79,0.6)',   color:C.bone,  cursor:'pointer' },
-    booked:      { bg:'rgba(180,40,40,0.25)',    border:'rgba(180,40,40,0.5)',   color:'rgba(227,218,201,0.4)', cursor:'not-allowed' },
-    hold:        { bg:'rgba(189,92,0,0.25)',     border:'rgba(189,92,0,0.6)',    color:'rgba(227,218,201,0.4)', cursor:'not-allowed' },
+    available:   { bg:'rgba(45,106,79,0.25)',   border:'rgba(45,106,79,0.6)',   color:'#ffffff',  cursor:'pointer' },
+    booked:      { bg:'rgba(180,40,40,0.25)',    border:'rgba(180,40,40,0.5)',   color:'rgba(255,255,255,0.70)', cursor:'not-allowed' },
+    hold:        { bg:'rgba(189,92,0,0.25)',     border:'rgba(189,92,0,0.6)',    color:'rgba(255,255,255,0.70)', cursor:'not-allowed' },
     unavailable: { bg:'rgba(176,183,190,0.1)',   border:'rgba(176,183,190,0.2)', color:'rgba(227,218,201,0.3)', cursor:'not-allowed' },
     past:        { bg:'transparent',             border:'transparent',           color:'rgba(227,218,201,0.15)',cursor:'default' },
   }
@@ -208,12 +208,12 @@ function AvailabilityCalendar({ availability, selectedDate, onSelectDate }) {
   return (
     <div style={{marginBottom:'40px'}}>
       <div style={{display:'flex',alignItems:'center',justifyContent:'space-between',marginBottom:'16px'}}>
-        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl}}>
+        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)'}}>
           Availability Calendar
         </p>
         <div style={{display:'flex',alignItems:'center',gap:'16px'}}>
           <button onClick={prevMonth} style={{background:'none',border:'none',color:C.gold,fontSize:'18px',cursor:'pointer',padding:'4px 8px',lineHeight:1}}>‹</button>
-          <span style={{fontSize:'13px',color:C.bone,fontWeight:500,minWidth:'140px',textAlign:'center'}}>{MONTHS[viewMonth]} {viewYear}</span>
+          <span style={{fontSize:'13px',color:'#ffffff',fontWeight:500,minWidth:'140px',textAlign:'center'}}>{MONTHS[viewMonth]} {viewYear}</span>
           <button onClick={nextMonth} style={{background:'none',border:'none',color:C.gold,fontSize:'18px',cursor:'pointer',padding:'4px 8px',lineHeight:1}}>›</button>
         </div>
       </div>
@@ -221,7 +221,7 @@ function AvailabilityCalendar({ availability, selectedDate, onSelectDate }) {
       {/* Day headers */}
       <div style={{display:'grid',gridTemplateColumns:'repeat(7,1fr)',gap:'4px',marginBottom:'4px'}}>
         {DAYS.map(d=>(
-          <div key={d} style={{textAlign:'center',fontSize:'9px',color:'rgba(227,218,201,0.35)',letterSpacing:'0.08em',textTransform:'uppercase',padding:'4px 0'}}>{d}</div>
+          <div key={d} style={{textAlign:'center',fontSize:'9px',color:'rgba(255,255,255,0.65)',letterSpacing:'0.08em',textTransform:'uppercase',padding:'4px 0'}}>{d}</div>
         ))}
       </div>
 
@@ -263,7 +263,7 @@ function AvailabilityCalendar({ availability, selectedDate, onSelectDate }) {
         ].map(l=>(
           <div key={l.label} style={{display:'flex',alignItems:'center',gap:'6px'}}>
             <div style={{width:'10px',height:'10px',borderRadius:'2px',background:l.color,border:`1px solid ${l.color}`}}/>
-            <span style={{fontSize:'10px',color:'rgba(227,218,201,0.45)'}}>{l.label}</span>
+            <span style={{fontSize:'10px',color:'rgba(255,255,255,0.75)'}}>{l.label}</span>
           </div>
         ))}
       </div>
@@ -315,11 +315,11 @@ export default function Booking() {
     width:'100%', background:'rgba(255,255,255,0.05)',
     border:`0.5px solid ${errors[f]?'#f87171':'rgba(227,218,201,0.15)'}`,
     borderRadius:'8px', padding:'14px 16px', fontSize:'14px',
-    color:C.bone, outline:'none', boxSizing:'border-box',
+    color:'#ffffff', outline:'none', boxSizing:'border-box',
     fontFamily:"'DM Sans',sans-serif",
   })
 
-  const labelStyle = {fontSize:'10px',textTransform:'uppercase',letterSpacing:'0.12em',color:C.pearl,marginBottom:'7px',display:'block'}
+  const labelStyle = {fontSize:'10px',textTransform:'uppercase',letterSpacing:'0.12em',color:'rgba(218,145,0,0.85)',marginBottom:'7px',display:'block'}
 
   if (submitted) return (
     <div style={{minHeight:'100vh',background:C.dark,display:'flex',flexDirection:'column'}}>
@@ -328,8 +328,8 @@ export default function Booking() {
       <div style={{flex:1,display:'flex',alignItems:'center',justifyContent:'center',padding:'60px 40px',textAlign:'center',marginTop:'160px'}}>
         <div>
           <div style={{width:'64px',height:'64px',borderRadius:'50%',border:`2px solid ${C.gold}`,display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 28px',fontSize:'26px',color:C.gold,boxShadow:'0 0 32px rgba(218,145,0,0.3)'}}>✓</div>
-          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'42px',color:C.bone,marginBottom:'16px'}}>You're booked.</h1>
-          <p style={{fontSize:'16px',color:'rgba(227,218,201,0.55)',maxWidth:'360px',margin:'0 auto 12px',lineHeight:1.8}}>Matt will confirm within the hour.</p>
+          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'42px',color:'#ffffff',marginBottom:'16px'}}>You're booked.</h1>
+          <p style={{fontSize:'16px',color:'rgba(255,255,255,0.85)',maxWidth:'360px',margin:'0 auto 12px',lineHeight:1.8}}>Matt will confirm within the hour.</p>
           {selectedDate && <p style={{fontSize:'13px',color:C.gold,marginBottom:'28px'}}>Requested date: {new Date(selectedDate+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}</p>}
           <a href="/" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'14px 32px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase'}}>Back to home</a>
         </div>
@@ -360,7 +360,7 @@ export default function Booking() {
         <div style={{position:'absolute',left:0,right:0,height:'1px',zIndex:3,background:'linear-gradient(to right,transparent,rgba(218,145,0,0.12),transparent)',animation:'scanline 10s linear infinite',pointerEvents:'none'}}/>
         <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'160px 24px 0'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'20px',animation:'fadeUp 0.8s ease 0.2s both'}}>Book a flight</div>
-          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(30px,5vw,54px)',lineHeight:1.1,color:C.bone,animation:'fadeUp 0.8s ease 0.4s both'}}>
+          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(30px,5vw,54px)',lineHeight:1.1,color:'#ffffff',animation:'fadeUp 0.8s ease 0.4s both'}}>
             Let's fly your<br/><em style={{color:C.gold}}>property.</em>
           </h1>
         </div>
@@ -370,7 +370,7 @@ export default function Booking() {
 
         {/* REGION SELECTOR */}
         <div style={{marginBottom:'36px'}}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'12px'}}>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'12px'}}>
             Your Location
           </p>
           <div style={{display:'flex',gap:'10px',flexWrap:'wrap'}}>
@@ -387,7 +387,7 @@ export default function Booking() {
               </button>
             ))}
           </div>
-          <p style={{fontSize:'11px',color:'rgba(227,218,201,0.35)',marginTop:'8px'}}>
+          <p style={{fontSize:'11px',color:'rgba(255,255,255,0.65)',marginTop:'8px'}}>
             Matt covers Virginia, West Virginia, and North Carolina.
           </p>
         </div>
@@ -409,11 +409,11 @@ export default function Booking() {
           borderRadius:'16px', padding:'36px',
           backgroundImage:gridBg, backgroundSize:'40px 40px',
         }}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'6px'}}>Your Details</p>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'6px'}}>Your Details</p>
           {selectedDate && (
             <p style={{fontSize:'13px',color:C.gold,marginBottom:'20px',fontWeight:500}}>
               Selected date: {new Date(selectedDate+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'})}
-              <button onClick={()=>setSelectedDate('')} style={{background:'none',border:'none',color:'rgba(227,218,201,0.4)',fontSize:'12px',cursor:'pointer',marginLeft:'12px'}}>✕ clear</button>
+              <button onClick={()=>setSelectedDate('')} style={{background:'none',border:'none',color:'rgba(255,255,255,0.70)',fontSize:'12px',cursor:'pointer',marginLeft:'12px'}}>✕ clear</button>
             </p>
           )}
 
@@ -470,13 +470,13 @@ export default function Booking() {
               Submit booking request
             </button>
 
-            <p style={{fontSize:'11px',color:'rgba(227,218,201,0.25)',textAlign:'center'}}>Matt confirms within the hour · No payment required to book</p>
+            <p style={{fontSize:'11px',color:'rgba(255,255,255,0.50)',textAlign:'center'}}>Matt confirms within the hour · No payment required to book</p>
           </div>
         </div>
 
         {/* WHAT HAPPENS NEXT */}
         <div style={{marginTop:'64px'}}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'28px',textAlign:'center'}}>What happens next</p>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'28px',textAlign:'center'}}>What happens next</p>
           {[
             {n:'01',t:'Matt confirms within the hour',       b:'You receive a confirmation with shoot details, what to expect, and any questions about the property.',accent:C.gold},
             {n:'02',t:'Weather monitored 72 hours out',      b:'Matt checks conditions before your shoot and proactively reaches out if anything is marginal. No surprises.',accent:C.clay},
@@ -488,8 +488,8 @@ export default function Booking() {
                 <span style={{fontSize:'9px',fontWeight:700,color:s.accent}}>{s.n}</span>
               </div>
               <div>
-                <p style={{fontFamily:"'Playfair Display',serif",fontSize:'16px',color:C.bone,marginBottom:'6px'}}>{s.t}</p>
-                <p style={{fontSize:'13px',color:'rgba(227,218,201,0.5)',lineHeight:1.75}}>{s.b}</p>
+                <p style={{fontFamily:"'Playfair Display',serif",fontSize:'16px',color:'#ffffff',marginBottom:'6px'}}>{s.t}</p>
+                <p style={{fontSize:'13px',color:'rgba(255,255,255,0.82)',lineHeight:1.75}}>{s.b}</p>
               </div>
             </div>
           ))}

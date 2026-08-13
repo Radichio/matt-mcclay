@@ -8,9 +8,9 @@ function Nav() {
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'10px 48px',background:'rgba(13,37,53,0.72)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
       <a href="/"><img src="/logo.svg" alt="Matt McClay + Associates" style={{width:'300px',height:'auto',opacity:1}}/></a>
       <div style={{display:'flex',gap:'32px',alignItems:'center'}}>
-        <a href="/events" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Events</a>
+        <a href="/events" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>Events</a>
         <a href="/about" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.gold}}>About</a>
-        <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
+        <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>Packages</a>
         <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
     </nav>
@@ -20,7 +20,7 @@ function Nav() {
 function Footer() {
   return (
     <footer style={{borderTop:'0.5px solid rgba(218,145,0,0.1)',padding:'20px 48px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'8px'}}>
-      <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
+      <span style={{fontSize:'11px',color:'rgba(255,255,255,0.50)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
       <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Commercial  ·  Events  ·  Architecture</span>
     </footer>
   )
@@ -70,7 +70,7 @@ export default function About() {
         ))}
         <div style={{position:'relative',zIndex:10,textAlign:'center',padding:'140px 24px 0'}}>
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'20px',animation:'fadeUp 0.8s ease 0.2s both'}}>About</div>
-          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(32px,5vw,58px)',lineHeight:1.1,color:C.bone,animation:'fadeUp 0.8s ease 0.4s both'}}>
+          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(32px,5vw,58px)',lineHeight:1.1,color:'#ffffff',animation:'fadeUp 0.8s ease 0.4s both'}}>
             A designer who learned<br/><em style={{color:C.gold}}>to fly.</em>
           </h1>
         </div>
@@ -84,17 +84,17 @@ export default function About() {
           </div>
         </Reveal>
         <Reveal>
-          <p style={{fontSize:'20px',color:C.bone,lineHeight:1.85,marginBottom:'24px',fontFamily:"'Playfair Display',serif",fontStyle:'italic'}}>
+          <p style={{fontSize:'20px',color:'#ffffff',lineHeight:1.85,marginBottom:'24px',fontFamily:"'Playfair Display',serif",fontStyle:'italic'}}>
             Matt McClay spent years as a professional graphic designer before earning his Licensed & insured certification. That background is what separates the work.
           </p>
         </Reveal>
         <Reveal delay={0.1}>
-          <p style={{fontSize:'16px',color:'rgba(227,218,201,0.6)',lineHeight:1.9,marginBottom:'24px'}}>
+          <p style={{fontSize:'16px',color:'rgba(255,255,255,0.88)',lineHeight:1.9,marginBottom:'24px'}}>
             Most drone operators think about airspace. Matt thinks about composition, light, story, and end use — then airspace. Every shoot is approached the way a designer would approach a brief: what does this need to communicate, and what's the most powerful way to communicate it from above?
           </p>
         </Reveal>
         <Reveal delay={0.15}>
-          <p style={{fontSize:'16px',color:'rgba(227,218,201,0.6)',lineHeight:1.9,marginBottom:'64px'}}>
+          <p style={{fontSize:'16px',color:'rgba(255,255,255,0.88)',lineHeight:1.9,marginBottom:'64px'}}>
             Based in Lynchburg, Virginia, Matt works with commercial real estate brokers, developers, architects, and construction companies across Virginia, West Virginia & North Carolina who need professional aerial media that moves listings and documents projects.
           </p>
         </Reveal>
@@ -111,8 +111,8 @@ export default function About() {
               {label:'Coverage',value:'Virginia, West Virginia & North Carolina',accent:C.bone},
             ].map(f=>(
               <div key={f.label} style={{borderTop:`2px solid ${f.accent}`,paddingTop:'14px'}}>
-                <p style={{fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.14em',color:C.pearl,marginBottom:'7px'}}>{f.label}</p>
-                <p style={{fontSize:'16px',color:C.bone,fontWeight:500}}>{f.value}</p>
+                <p style={{fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.14em',color:'rgba(218,145,0,0.85)',marginBottom:'7px'}}>{f.label}</p>
+                <p style={{fontSize:'16px',color:'#ffffff',fontWeight:500}}>{f.value}</p>
               </div>
             ))}
           </div>
@@ -120,7 +120,7 @@ export default function About() {
 
         {/* How it works */}
         <Reveal>
-          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'32px',color:C.bone,marginBottom:'36px'}}>How it works</h2>
+          <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'32px',color:'#ffffff',marginBottom:'36px'}}>How it works</h2>
         </Reveal>
         {[
           {step:'01',title:'You reach out',body:'Email, call, or book through the site. Matt responds within the hour during business hours.',accent:C.gold},
@@ -134,8 +134,8 @@ export default function About() {
                 <span style={{fontSize:'10px',fontWeight:700,color:item.accent}}>{item.step}</span>
               </div>
               <div>
-                <p style={{fontFamily:"'Playfair Display',serif",fontSize:'18px',color:C.bone,marginBottom:'8px'}}>{item.title}</p>
-                <p style={{fontSize:'14px',color:'rgba(227,218,201,0.55)',lineHeight:1.8}}>{item.body}</p>
+                <p style={{fontFamily:"'Playfair Display',serif",fontSize:'18px',color:'#ffffff',marginBottom:'8px'}}>{item.title}</p>
+                <p style={{fontSize:'14px',color:'rgba(255,255,255,0.85)',lineHeight:1.8}}>{item.body}</p>
               </div>
             </div>
           </Reveal>
@@ -144,8 +144,8 @@ export default function About() {
         {/* CTA */}
         <Reveal delay={0.2}>
           <div style={{marginTop:'64px',padding:'48px',background:'rgba(218,145,0,0.05)',border:'0.5px solid rgba(218,145,0,0.2)',borderRadius:'16px',textAlign:'center',backgroundImage:gridBg,backgroundSize:'40px 40px'}}>
-            <p style={{fontFamily:"'Playfair Display',serif",fontSize:'26px',color:C.bone,marginBottom:'14px'}}>Ready to see what your listing looks like from above?</p>
-            <p style={{fontSize:'14px',color:'rgba(227,218,201,0.5)',marginBottom:'28px'}}>First shoot complimentary. No obligation.</p>
+            <p style={{fontFamily:"'Playfair Display',serif",fontSize:'26px',color:'#ffffff',marginBottom:'14px'}}>Ready to see what your listing looks like from above?</p>
+            <p style={{fontSize:'14px',color:'rgba(255,255,255,0.82)',marginBottom:'28px'}}>First shoot complimentary. No obligation.</p>
             <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'15px 36px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a flight</a>
           </div>
         </Reveal>

@@ -6,8 +6,8 @@ function Nav() {
     <nav style={{position:'fixed',top:0,left:0,right:0,zIndex:200,display:'flex',alignItems:'center',justifyContent:'space-between',padding:'10px 48px',background:'rgba(13,37,53,0.72)',backdropFilter:'blur(16px)',borderBottom:'0.5px solid rgba(218,145,0,0.15)'}}>
       <a href="/"><img src="/logo.svg" alt="Matt McClay + Associates" style={{width:'300px',height:'auto',opacity:1}}/></a>
       <div style={{display:'flex',gap:'28px',alignItems:'center'}}>
-        <a href="/about"    style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>About</a>
-        <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.bone,opacity:0.7}}>Packages</a>
+        <a href="/about"    style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>About</a>
+        <a href="/packages" style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:'#ffffff',opacity:0.7}}>Packages</a>
         <a href="/events"   style={{fontSize:'11px',letterSpacing:'0.12em',textTransform:'uppercase',color:C.gold}}>Events</a>
         <a href="/booking"  style={{background:C.gold,color:C.dark,borderRadius:'6px',padding:'10px 22px',fontSize:'11px',fontWeight:700,letterSpacing:'0.08em',textTransform:'uppercase'}}>Book a flight</a>
       </div>
@@ -18,7 +18,7 @@ function Nav() {
 function Footer() {
   return (
     <footer style={{borderTop:'0.5px solid rgba(218,145,0,0.1)',padding:'20px 48px',display:'flex',alignItems:'center',justifyContent:'space-between',flexWrap:'wrap',gap:'8px'}}>
-      <span style={{fontSize:'11px',color:'rgba(227,218,201,0.25)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
+      <span style={{fontSize:'11px',color:'rgba(255,255,255,0.50)'}}>mattmcclay.com  ·  Lynchburg, VA  </span>
       <span style={{fontSize:'11px',color:'rgba(218,145,0,0.5)',letterSpacing:'0.06em'}}>Weddings  ·  Proposals  ·  Corporate  ·  Celebrations</span>
     </footer>
   )
@@ -49,20 +49,20 @@ export default function Events() {
           <div style={{fontSize:'10px',letterSpacing:'0.22em',textTransform:'uppercase',color:C.gold,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.2s both'}}>
             Event Aerial  ·  Weddings  ·  Proposals  ·  Celebrations
           </div>
-          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(38px,6vw,72px)',lineHeight:1.08,color:C.bone,marginBottom:'28px',animation:'fadeUp 0.8s ease 0.4s both'}}>
+          <h1 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(38px,6vw,72px)',lineHeight:1.08,color:'#ffffff',marginBottom:'28px',animation:'fadeUp 0.8s ease 0.4s both'}}>
             The moments that matter<br/><em style={{color:C.gold}}>deserve to be seen.</em>
           </h1>
-          <p style={{fontSize:'17px',color:'rgba(227,218,201,0.6)',maxWidth:'480px',margin:'0 auto 44px',lineHeight:1.85,animation:'fadeUp 0.8s ease 0.6s both'}}>
+          <p style={{fontSize:'17px',color:'rgba(255,255,255,0.88)',maxWidth:'480px',margin:'0 auto 44px',lineHeight:1.85,animation:'fadeUp 0.8s ease 0.6s both'}}>
             Aerial coverage that captures the scale, the setting, and the emotion of your most important days — from above.
           </p>
           <div style={{display:'flex',gap:'14px',justifyContent:'center',flexWrap:'wrap',animation:'fadeUp 0.8s ease 0.8s both'}}>
             <a href="/booking" style={{background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.25)'}}>Book a flight</a>
-            <a href="/packages" style={{background:'transparent',color:C.bone,border:'0.5px solid rgba(227,218,201,0.22)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>All packages</a>
+            <a href="/packages" style={{background:'transparent',color:'#ffffff',border:'0.5px solid rgba(227,218,201,0.22)',borderRadius:'8px',padding:'17px 40px',fontSize:'14px',letterSpacing:'0.04em',textTransform:'uppercase'}}>All packages</a>
           </div>
         </div>
 
         <div style={{position:'absolute',bottom:'32px',left:'50%',transform:'translateX(-50%)',zIndex:10,display:'flex',flexDirection:'column',alignItems:'center',gap:'8px'}}>
-          <span style={{fontSize:'9px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(227,218,201,0.35)'}}>Scroll</span>
+          <span style={{fontSize:'9px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(255,255,255,0.65)'}}>Scroll</span>
           <div style={{width:'1px',height:'40px',background:`linear-gradient(to bottom, ${C.gold}, transparent)`,animation:'scrollPulse 2s ease infinite'}}/>
         </div>
       </section>
@@ -79,15 +79,15 @@ export default function Events() {
         ].map(s=>(
           <div key={s.label} style={{textAlign:'center'}}>
             <p style={{fontSize:'10px',fontWeight:700,color:C.gold,letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'4px'}}>{s.label}</p>
-            <p style={{fontSize:'11px',color:'rgba(227,218,201,0.45)'}}>{s.sub}</p>
+            <p style={{fontSize:'11px',color:'rgba(255,255,255,0.75)'}}>{s.sub}</p>
           </div>
         ))}
       </section>
 
       {/* WHY AERIAL */}
       <section style={{padding:'88px 48px',maxWidth:'1000px',margin:'0 auto'}}>
-        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px',textAlign:'center'}}>Why aerial</p>
-        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:C.bone,marginBottom:'56px',textAlign:'center'}}>
+        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px',textAlign:'center'}}>Why aerial</p>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,44px)',color:'#ffffff',marginBottom:'56px',textAlign:'center'}}>
           No camera on the ground<br/>captures what a drone can.
         </h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'40px'}}>
@@ -98,8 +98,8 @@ export default function Events() {
             {title:'A keepsake that lasts', body:'Delivered as edited photos and video — formatted for printing, sharing, and replaying for the rest of your life.',accent:C.bone},
           ].map((c,i)=>(
             <div key={i} style={{borderTop:`2px solid ${c.accent}`,paddingTop:'20px'}}>
-              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'17px',color:C.bone,marginBottom:'10px',lineHeight:1.3}}>{c.title}</p>
-              <p style={{fontSize:'13px',color:'rgba(227,218,201,0.55)',lineHeight:1.8}}>{c.body}</p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'17px',color:'#ffffff',marginBottom:'10px',lineHeight:1.3}}>{c.title}</p>
+              <p style={{fontSize:'13px',color:'rgba(255,255,255,0.85)',lineHeight:1.8}}>{c.body}</p>
             </div>
           ))}
         </div>
@@ -107,9 +107,9 @@ export default function Events() {
 
       {/* PRICING */}
       <section style={{padding:'0 48px 88px',maxWidth:'1100px',margin:'0 auto'}}>
-        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:C.pearl,marginBottom:'16px',textAlign:'center'}}>Event Packages</p>
-        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,40px)',color:C.bone,marginBottom:'10px',textAlign:'center'}}>Simple. Transparent. Memorable.</h2>
-        <p style={{fontSize:'14px',color:'rgba(227,218,201,0.4)',textAlign:'center',marginBottom:'48px'}}>50% deposit at booking · Balance due on the day</p>
+        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'rgba(218,145,0,0.85)',marginBottom:'16px',textAlign:'center'}}>Event Packages</p>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,40px)',color:'#ffffff',marginBottom:'10px',textAlign:'center'}}>Simple. Transparent. Memorable.</h2>
+        <p style={{fontSize:'14px',color:'rgba(255,255,255,0.70)',textAlign:'center',marginBottom:'48px'}}>50% deposit at booking · Balance due on the day</p>
 
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(220px,1fr))',gap:'18px',marginBottom:'36px'}}>
           {[
@@ -128,8 +128,8 @@ export default function Events() {
           ].map((pkg,i)=>(
             <div key={pkg.name} style={{background:pkg.hot?'rgba(218,145,0,0.07)':'rgba(255,255,255,0.03)',border:`0.5px solid ${pkg.hot?'rgba(218,145,0,0.4)':'rgba(227,218,201,0.08)'}`,borderTop:`2px solid ${pkg.accent}`,borderRadius:'14px',padding:'28px 22px',display:'flex',flexDirection:'column',boxShadow:pkg.hot?'0 0 40px rgba(218,145,0,0.08)':'none'}}>
               <p style={{fontSize:'9px',textTransform:'uppercase',letterSpacing:'0.14em',color:pkg.accent,marginBottom:'7px'}}>{pkg.tag}{pkg.hot?' — Most Popular':''}</p>
-              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'22px',color:C.bone,marginBottom:'5px'}}>{pkg.name}</p>
-              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'30px',color:C.bone,marginBottom:'10px'}}>{pkg.price}</p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'22px',color:'#ffffff',marginBottom:'5px'}}>{pkg.name}</p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'30px',color:'#ffffff',marginBottom:'10px'}}>{pkg.price}</p>
               <div style={{background:'rgba(218,145,0,0.08)',border:'0.5px solid rgba(218,145,0,0.25)',borderRadius:'5px',padding:'5px 8px',marginBottom:'14px'}}>
                 <p style={{fontSize:'10px',fontWeight:700,color:C.gold}}>{pkg.deposit}</p>
               </div>
@@ -141,7 +141,7 @@ export default function Events() {
                 ))}
               </ul>
               <div style={{borderTop:'0.5px solid rgba(227,218,201,0.07)',paddingTop:'12px'}}>
-                <p style={{fontSize:'10px',color:C.pearl}}>Ideal for: {pkg.ideal}</p>
+                <p style={{fontSize:'10px',color:'rgba(218,145,0,0.85)'}}>Ideal for: {pkg.ideal}</p>
               </div>
             </div>
           ))}
@@ -155,7 +155,7 @@ export default function Events() {
 
       {/* ADD-ONS */}
       <section style={{padding:'0 48px 88px',maxWidth:'820px',margin:'0 auto'}}>
-        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'28px',color:C.bone,marginBottom:'24px',textAlign:'center'}}>Add-ons</h2>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'28px',color:'#ffffff',marginBottom:'24px',textAlign:'center'}}>Add-ons</h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(200px,1fr))',gap:'12px'}}>
           {[
             {name:'Extended edit reel',   price:'+$150',desc:'Up to 5-minute cut'},
@@ -167,10 +167,10 @@ export default function Events() {
           ].map(a=>(
             <div key={a.name} style={{background:'rgba(255,255,255,0.03)',border:'0.5px solid rgba(227,218,201,0.08)',borderRadius:'8px',padding:'16px'}}>
               <div style={{display:'flex',justifyContent:'space-between',marginBottom:'4px'}}>
-                <p style={{fontSize:'12px',fontWeight:600,color:C.bone}}>{a.name}</p>
+                <p style={{fontSize:'12px',fontWeight:600,color:'#ffffff'}}>{a.name}</p>
                 <p style={{fontSize:'12px',color:C.gold,fontWeight:700}}>{a.price}</p>
               </div>
-              <p style={{fontSize:'11px',color:'rgba(227,218,201,0.4)'}}>{a.desc}</p>
+              <p style={{fontSize:'11px',color:'rgba(255,255,255,0.70)'}}>{a.desc}</p>
             </div>
           ))}
         </div>
@@ -178,7 +178,7 @@ export default function Events() {
 
       {/* NOTES */}
       <section style={{margin:'0 48px 88px',padding:'40px 48px',background:'rgba(19,57,81,0.4)',border:'0.5px solid rgba(176,183,190,0.15)',borderRadius:'16px',backgroundImage:gridBg,backgroundSize:'40px 40px'}}>
-        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'24px',color:C.bone,marginBottom:'28px'}}>A few things to know</h2>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'24px',color:'#ffffff',marginBottom:'28px'}}>A few things to know</h2>
         <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(210px,1fr))',gap:'28px'}}>
           {[
             {title:'Book early',      body:'Event dates fill up — especially May through October. Securing your date early ensures availability and gives Matt time to plan the flight path.'},
@@ -187,8 +187,8 @@ export default function Events() {
             {title:'Delivery',        body:'Edited photos and video delivered to your private portal within 24–48 hours. Download everything and share the link.'},
           ].map((n,i)=>(
             <div key={i} style={{borderTop:'1.5px solid rgba(218,145,0,0.35)',paddingTop:'16px'}}>
-              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'16px',color:C.bone,marginBottom:'8px'}}>{n.title}</p>
-              <p style={{fontSize:'13px',color:'rgba(227,218,201,0.55)',lineHeight:1.75}}>{n.body}</p>
+              <p style={{fontFamily:"'Playfair Display',serif",fontSize:'16px',color:'#ffffff',marginBottom:'8px'}}>{n.title}</p>
+              <p style={{fontSize:'13px',color:'rgba(255,255,255,0.85)',lineHeight:1.75}}>{n.body}</p>
             </div>
           ))}
         </div>
@@ -196,10 +196,10 @@ export default function Events() {
 
       {/* CTA */}
       <section style={{padding:'88px 48px',textAlign:'center',borderTop:'1px solid rgba(218,145,0,0.1)'}}>
-        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,48px)',color:C.bone,marginBottom:'18px',lineHeight:1.15}}>
+        <h2 style={{fontFamily:"'Playfair Display',serif",fontSize:'clamp(28px,4vw,48px)',color:'#ffffff',marginBottom:'18px',lineHeight:1.15}}>
           Your day deserves<br/><em style={{color:C.gold}}>the view from above.</em>
         </h2>
-        <p style={{fontSize:'15px',color:'rgba(227,218,201,0.5)',maxWidth:'360px',margin:'0 auto 36px',lineHeight:1.85}}>
+        <p style={{fontSize:'15px',color:'rgba(255,255,255,0.82)',maxWidth:'360px',margin:'0 auto 36px',lineHeight:1.85}}>
           First consultation is complimentary. Matt will walk through the venue, the flight plan, and what to expect on the day.
         </p>
         <a href="/booking" style={{display:'inline-block',background:C.gold,color:C.dark,borderRadius:'8px',padding:'17px 40px',fontSize:'14px',fontWeight:700,letterSpacing:'0.04em',textTransform:'uppercase',boxShadow:'0 0 32px rgba(218,145,0,0.2)'}}>Book a flight</a>

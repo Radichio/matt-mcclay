@@ -70,7 +70,8 @@ export default function Packages() {
   const [base, setBase] = useState('Soar')
   const [addons, setAddons] = useState([])
   const basePkg = PKGS.find(p => p.name === base)
-  const basePrice = base === 'Territory' ? 1495 : (PKGS.find(pkg=>pkg.name===base)?.price || 0)
+  const basePriceRaw = PKGS.find(pkg=>pkg.name===base)?.price || '0'
+  const basePrice = base === 'Territory' ? 1495 : parseInt(String(basePriceRaw).replace(/[^0-9]/g,'')) || 0
   const addonTotal = addons.reduce((s,a) => s + (ADDONS.find(x=>x.name===a)?.price||0), 0)
   const total = basePrice + addonTotal
 

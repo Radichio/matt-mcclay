@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="520" height="160">
+
+  <!-- LEFT MOUNTAIN -->
+  <polygon points="20,140 90,28 130,140" fill="#E3DAC9"/>
+  <polygon points="20,140 52,86 64,140" fill="rgba(13,37,53,0.28)"/>
+  <polygon points="70,66 90,28 102,56 82,98" fill="rgba(13,37,53,0.16)"/>
+
+  <!-- RIGHT MOUNTAIN — Pearl peak + body -->
+  <polygon points="108,140 150,48 180,48 172,140" fill="#E3DAC9" opacity="0.82"/>
+  <polygon points="150,48 165,26 180,48" fill="#B0B7BE"/>
+
+  <!-- DRONE ICON top right — Gold -->
+  <g transform="translate(194, 20)">
+    <line x1="10" y1="1"  x2="10" y2="19" stroke="#DA9100" stroke-width="2" stroke-linecap="round"/>
+    <line x1="1"  y1="10" x2="19" y2="10" stroke="#DA9100" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="10" cy="1"  r="3.5" fill="#DA9100"/>
+    <circle cx="10" cy="19" r="3.5" fill="#DA9100"/>
+    <circle cx="1"  cy="10" r="3.5" fill="#DA9100"/>
+    <circle cx="19" cy="10" r="3.5" fill="#DA9100"/>
+  </g>
+
+  <!-- MATT McCLAY -->
+  <text x="228" y="92"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="54" font-weight="400"
+    fill="#E3DAC9" letter-spacing="1">Matt McClay</text>
+
+  <!-- + ASSOCIATES -->
+  <text x="233" y="126"
+    font-family="'Helvetica Neue', Arial, sans-serif"
+    font-size="17" font-weight="300"
+    fill="#B0B7BE" letter-spacing="5">+ ASSOCIATES</text>
+
+</svg>
